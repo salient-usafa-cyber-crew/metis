@@ -1,5 +1,5 @@
-import User, { TCommonUserJson, TUserOptions } from 'metis/users'
-import { TTargetEnvContextUser } from '../target-environments/context-provider'
+import User, { TCommonUserJson, TUserOptions } from 'metis/users/index.ts'
+import { TTargetEnvContextUser } from '../target-environments/context-provider.ts'
 
 /**
  * Class for managing users on the server.

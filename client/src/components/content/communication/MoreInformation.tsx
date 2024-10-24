@@ -1,8 +1,8 @@
 /* -- scripts -- */
 
-import './MoreInformation.scss'
 import React from 'react'
-import Tooltip from './Tooltip'
+import './MoreInformation.scss'
+import Tooltip from './Tooltip.tsx'
 // import Tooltip from './Tooltip'
 
 /* -- interface -- */

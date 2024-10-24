@@ -1,4 +1,4 @@
-import Arg, { TBaseArg, TBaseArgJson } from '.'
+import Arg, { TBaseArg, TBaseArgJson } from './index.ts'
 
 /**
  * The node argument type for a target.

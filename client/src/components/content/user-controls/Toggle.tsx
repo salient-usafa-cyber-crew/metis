@@ -1,4 +1,4 @@
-import { compute } from 'src/toolbox'
+import { compute } from 'src/toolbox/index.ts'
 import './Toggle.scss'
 
 /**

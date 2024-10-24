@@ -1,10 +1,10 @@
 import './StatusBar.scss'
 
-import { TServerConnectionStatus } from '../../../../../shared/connect/data'
+import { TServerConnectionStatus } from 'metis/shared/connect/data.ts'
 import { useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import { useEventListener } from 'src/toolbox/hooks'
-import { TUnfulfilledReqData } from 'src/connect/servers'
+import { TUnfulfilledReqData } from 'src/connect/servers.ts'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { useEventListener } from 'src/toolbox/hooks.tsx'
 
 /**
  * A status bar that displays the status of a server connection

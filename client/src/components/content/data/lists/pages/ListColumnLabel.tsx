@@ -1,7 +1,7 @@
-import { compute } from 'src/toolbox'
-import { TListColumnType } from '../List'
+import { compute } from 'src/toolbox/index.ts'
+import { TListColumnType } from '../List.tsx'
 import './ListColumnLabel.scss'
-import { TListItem } from './ListItem'
+import { TListItem } from './ListItem.tsx'
 
 /**
  * A label for a column of a `List` component.

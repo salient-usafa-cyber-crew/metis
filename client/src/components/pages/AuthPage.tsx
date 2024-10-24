@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import ClientLogin from 'src/logins'
-import { compute } from 'src/toolbox'
-import { TPage_P } from '.'
-import { DetailString } from '../content/form/DetailString'
-import Branding from '../content/general-layout/Branding'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientLogin from 'src/logins/index.ts'
+import { compute } from 'src/toolbox/index.ts'
+import { DetailString } from '../content/form/DetailString.tsx'
+import Branding from '../content/general-layout/Branding.tsx'
 import './AuthPage.scss'
+import { TPage_P } from './index.ts'
 
 export interface IAuthPage extends TPage_P {}
 

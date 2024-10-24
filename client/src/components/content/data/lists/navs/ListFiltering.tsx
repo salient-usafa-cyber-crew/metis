@@ -1,8 +1,8 @@
 import { createRef, ReactNode, useEffect, useState } from 'react'
-import { compute } from 'src/toolbox'
-import Tooltip from '../../../communication/Tooltip'
-import { useListContext } from '../List'
-import { TListItem } from '../pages/ListItem'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../../../communication/Tooltip.tsx'
+import { useListContext } from '../List.tsx'
+import { TListItem } from '../pages/ListItem.tsx'
 import './ListFiltering.scss'
 
 /**

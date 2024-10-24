@@ -1,6 +1,6 @@
-import { useGlobalContext } from 'src/context'
-import { compute } from 'src/toolbox'
-import Tooltip from '../communication/Tooltip'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../communication/Tooltip.tsx'
 import './Branding.scss'
 
 /* -- components -- */

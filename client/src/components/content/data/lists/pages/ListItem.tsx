@@ -1,17 +1,17 @@
 import { ReactNode, useRef } from 'react'
-import ButtonMenuController from 'src/components/content/user-controls/buttons/ButtonMenuController'
-import { useGlobalContext } from 'src/context'
-import { compute } from 'src/toolbox'
+import ButtonMenuController from 'src/components/content/user-controls/buttons/ButtonMenuController.tsx'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { compute } from 'src/toolbox/index.ts'
 import ButtonSvg, {
   TButtonSvgType,
-} from '../../../user-controls/buttons/ButtonSvg'
+} from '../../../user-controls/buttons/ButtonSvg.tsx'
 import {
   OPTIONS_COLUMN_WIDTH,
   OPTIONS_COLUMN_WIDTH_IF_LAST,
   useListContext,
-} from '../List'
+} from '../List.tsx'
 import './ListItem.scss'
-import ListItemCell from './ListItemCell'
+import ListItemCell from './ListItemCell.tsx'
 
 /**
  * A list item in a `List` component.

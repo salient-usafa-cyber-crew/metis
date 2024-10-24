@@ -1,24 +1,31 @@
 import MongoStore from 'connect-mongo'
+import cookieParser from 'cookie-parser'
+import cors from 'cors'
 import express, { Express, RequestHandler } from 'express'
 import rateLimit from 'express-rate-limit'
 import session, { Session, SessionData } from 'express-session'
 import fs from 'fs'
 import http, { Server as HttpServer } from 'http'
-import MetisDatabase from 'metis/server/database'
-import MetisRouter from 'metis/server/http/router'
-import { expressLogger, expressLoggingHandler } from 'metis/server/logging'
-import { TCommonTargetEnvJson } from 'metis/target-environments'
+import MetisDatabase from 'metis/server/database/index.ts'
+import MetisRouter from 'metis/server/http/router.ts'
+import {
+  expressLogger,
+  expressLoggingHandler,
+} from 'metis/server/logging/index.ts'
+import { TCommonTargetEnvJson } from 'metis/target-environments/index.ts'
 import mongoose from 'mongoose'
-import path from 'path'
+import path, { dirname } from 'path'
 import { sys } from 'typescript'
-import MetisWsServer from './connect'
-import MetisFileStore from './files'
-import ServerTargetEnvironment from './target-environments'
-const cookieParser = require('cookie-parser')
-const cors = require('cors')
-const defaults = require('../defaults')
-const packageJson = require('../package.json')
-const socketIo = require('socket.io')
+import { fileURLToPath } from 'url'
+import defaults from '../defaults.js'
+import packageJson from '../package.json' with { type: 'json' }
+import MetisWsServer from './connect/index.ts'
+import MetisFileStore from './files/index.ts'
+import ServerTargetEnvironment from './target-environments/index.ts'
+
+// Get the file path of the current file.
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 /**
  * Manages an Express web server for METIS.
@@ -291,7 +298,7 @@ export default class MetisServer {
       )
       // Get the target environment JSON.
       let targetEnvJson: TCommonTargetEnvJson[] =
-        ServerTargetEnvironment.scan(targetEnvDir)
+        await ServerTargetEnvironment.scan(targetEnvDir)
       // Add each target environment to the registry
       // by creating a new target environment object
       // from the JSON.

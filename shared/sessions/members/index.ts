@@ -1,9 +1,13 @@
-import { TCommonMissionTypes } from 'metis/missions'
-import { TCommonMissionForce, TForce } from 'metis/missions/forces'
-import { TCommonUser, TCommonUserJson, TSessionUser } from 'metis/users'
-import { TCommonSession, TSession } from '..'
-import MemberPermission from './permissions'
-import MemberRole, { TMemberRoleId } from './roles'
+import { TCommonMissionForce, TForce } from 'metis/missions/forces/index.ts'
+import { TCommonMissionTypes } from 'metis/missions/index.ts'
+import {
+  TCommonUser,
+  TCommonUserJson,
+  TSessionUser,
+} from 'metis/users/index.ts'
+import { TCommonSession, TSession } from '../index.ts'
+import MemberPermission from './permissions.ts'
+import MemberRole, { TMemberRoleId } from './roles.ts'
 
 /* -- CLASSES -- */
 

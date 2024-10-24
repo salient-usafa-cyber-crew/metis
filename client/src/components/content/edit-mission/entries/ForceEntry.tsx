@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import ClientMission from 'src/missions'
-import ClientMissionForce from 'src/missions/forces'
-import { compute } from 'src/toolbox'
-import { usePostInitEffect } from 'src/toolbox/hooks'
-import Prompt from '../../communication/Prompt'
-import { DetailColorSelector } from '../../form/DetailColorSelector'
-import { DetailLargeString } from '../../form/DetailLargeString'
-import { DetailNumber } from '../../form/DetailNumber'
-import { DetailString } from '../../form/DetailString'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientMissionForce from 'src/missions/forces/index.ts'
+import ClientMission from 'src/missions/index.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Prompt from '../../communication/Prompt.tsx'
+import { DetailColorSelector } from '../../form/DetailColorSelector.tsx'
+import { DetailLargeString } from '../../form/DetailLargeString.tsx'
+import { DetailNumber } from '../../form/DetailNumber.tsx'
+import { DetailString } from '../../form/DetailString.tsx'
 import {
   ButtonText,
   TButtonText_P,
-} from '../../user-controls/buttons/ButtonText'
+} from '../../user-controls/buttons/ButtonText.tsx'
 import './index.scss'
-import EntryNavigation from './navigation/EntryNavigation'
+import EntryNavigation from './navigation/EntryNavigation.tsx'
 
 /**
  * This will render the basic editable details of a mission force.

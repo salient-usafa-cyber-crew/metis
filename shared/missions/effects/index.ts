@@ -1,19 +1,22 @@
 import { v4 as generateHash } from 'uuid'
-import { TCommonMission, TCommonMissionTypes, TMission } from '..'
-import { TCommonTargetEnv, TTargetEnv } from '../../target-environments'
-import { TTargetArg } from '../../target-environments/args'
-import ForceArg from '../../target-environments/args/force-arg'
-import NodeArg from '../../target-environments/args/node-arg'
-import Dependency from '../../target-environments/dependencies'
+import ForceArg from '../../target-environments/args/force-arg.ts'
+import { TTargetArg } from '../../target-environments/args/index.ts'
+import NodeArg from '../../target-environments/args/node-arg.ts'
+import Dependency from '../../target-environments/dependencies.ts'
+import {
+  TCommonTargetEnv,
+  TTargetEnv,
+} from '../../target-environments/index.ts'
 import Target, {
   TCommonTarget,
   TCommonTargetJson,
   TTarget,
-} from '../../target-environments/targets'
-import { AnyObject } from '../../toolbox/objects'
-import { TAction, TCommonMissionAction } from '../actions'
-import { TCommonMissionForce, TForce } from '../forces'
-import { TCommonMissionNode, TNode } from '../nodes'
+} from '../../target-environments/targets.ts'
+import { AnyObject } from '../../toolbox/objects.ts'
+import { TAction, TCommonMissionAction } from '../actions/index.ts'
+import { TCommonMissionForce, TForce } from '../forces/index.ts'
+import { TCommonMission, TCommonMissionTypes, TMission } from '../index.ts'
+import { TCommonMissionNode, TNode } from '../nodes/index.ts'
 
 /**
  * An effect that can be applied to a target.

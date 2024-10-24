@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import ClientMissionPrototype from 'src/missions/nodes/prototypes'
-import { compute } from 'src/toolbox'
-import { usePostInitEffect } from 'src/toolbox/hooks'
-import { DetailLocked } from '../../form/DetailLocked'
-import { DetailNumber } from '../../form/DetailNumber'
-import { ButtonText } from '../../user-controls/buttons/ButtonText'
+import ClientMissionPrototype from 'src/missions/nodes/prototypes.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import { DetailLocked } from '../../form/DetailLocked.tsx'
+import { DetailNumber } from '../../form/DetailNumber.tsx'
+import { ButtonText } from '../../user-controls/buttons/ButtonText.tsx'
 import './index.scss'
-import EntryNavigation from './navigation/EntryNavigation'
+import EntryNavigation from './navigation/EntryNavigation.tsx'
 
 /**
  * This will render the basic editable details of a mission prototype.

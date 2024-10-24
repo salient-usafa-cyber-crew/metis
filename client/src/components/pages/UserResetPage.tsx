@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import { compute } from 'src/toolbox'
-import { useMountHandler, usePostInitEffect } from 'src/toolbox/hooks'
-import ClientUser from 'src/users'
-import { DefaultLayout, TPage_P } from '.'
-import { DetailLocked } from '../content/form/DetailLocked'
-import { DetailString } from '../content/form/DetailString'
-import { LogoutLink, TNavigation } from '../content/general-layout/Navigation'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { useMountHandler, usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import ClientUser from 'src/users/index.ts'
+import { DetailLocked } from '../content/form/DetailLocked.tsx'
+import { DetailString } from '../content/form/DetailString.tsx'
+import {
+  LogoutLink,
+  TNavigation,
+} from '../content/general-layout/Navigation.tsx'
+import { DefaultLayout, TPage_P } from './index.tsx'
 import './UserResetPage.scss'
 
 /**

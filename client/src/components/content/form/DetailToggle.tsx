@@ -1,8 +1,8 @@
-import { compute } from 'src/toolbox'
-import { TDetailRequired_P } from '.'
-import Tooltip from '../communication/Tooltip'
-import Toggle, { TToggleLockState } from '../user-controls/Toggle'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../communication/Tooltip.tsx'
+import Toggle, { TToggleLockState } from '../user-controls/Toggle.tsx'
 import './DetailToggle.scss'
+import { TDetailRequired_P } from './index.ts'
 
 /**
  * This will render a detail for a form,

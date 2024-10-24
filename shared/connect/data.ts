@@ -1,19 +1,19 @@
 import {
   TActionExecutionJson,
   TExecutionCheats,
-} from 'metis/missions/actions/executions'
-import { TActionOutcomeJson } from 'metis/missions/actions/outcomes'
-import { TCommonMissionForceJson } from 'metis/missions/forces'
-import { TCommonOutputJson } from 'metis/missions/forces/output'
-import { TCommonMissionPrototypeJson } from 'metis/missions/nodes/prototypes'
-import { TSessionConfig, TSessionJson } from 'metis/sessions'
+} from 'metis/missions/actions/executions.ts'
+import { TActionOutcomeJson } from 'metis/missions/actions/outcomes.ts'
+import { TCommonMissionForceJson } from 'metis/missions/forces/index.ts'
+import { TCommonOutputJson } from 'metis/missions/forces/output.ts'
+import { TCommonMissionPrototypeJson } from 'metis/missions/nodes/prototypes.ts'
+import { TSessionConfig, TSessionJson } from 'metis/sessions/index.ts'
 import SessionMember, {
   TCommonSessionMember,
   TSessionMemberJson,
-} from 'metis/sessions/members'
-import MemberRole from 'metis/sessions/members/roles'
-import { AnyObject } from 'metis/toolbox/objects'
-import { TCommonMissionNodeJson } from '../missions/nodes'
+} from 'metis/sessions/members/index.ts'
+import MemberRole from 'metis/sessions/members/roles.ts'
+import { AnyObject } from 'metis/toolbox/objects.ts'
+import { TCommonMissionNodeJson } from '../missions/nodes/index.ts'
 
 /**
  * Represents the status of a server connection.

@@ -1,20 +1,24 @@
-import { TCommonMissionTypes } from 'metis/missions'
+import IActionExecution, {
+  TActionExecutionJson,
+  TExecution,
+} from 'metis/missions/actions/executions.ts'
 import {
   TAction,
   TCommonMissionAction,
   TCommonMissionActionJson,
-} from 'metis/missions/actions'
-import IActionExecution, {
-  TActionExecutionJson,
-  TExecution,
-} from 'metis/missions/actions/executions'
+} from 'metis/missions/actions/index.ts'
+import { TCommonMissionTypes } from 'metis/missions/index.ts'
 import {
   TCommonMissionNode,
   TCommonMissionNodeJson,
   TNode,
-} from 'metis/missions/nodes'
-import { TCommonMissionForce, TCommonMissionForceJson, TForce } from '.'
-import StringToolbox from '../../toolbox/strings'
+} from 'metis/missions/nodes/index.ts'
+import StringToolbox from '../../toolbox/strings.ts'
+import {
+  TCommonMissionForce,
+  TCommonMissionForceJson,
+  TForce,
+} from './index.ts'
 
 /**
  * An output that's displayed in a force's output panel.

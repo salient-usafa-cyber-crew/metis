@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import { ClientEffect } from 'src/missions/effects'
-import { usePostInitEffect } from 'src/toolbox/hooks'
-import { DetailLargeString } from '../../form/DetailLargeString'
-import { DetailLocked } from '../../form/DetailLocked'
-import { DetailString } from '../../form/DetailString'
-import { ButtonText } from '../../user-controls/buttons/ButtonText'
-import ArgEntry from '../target-effects/ArgEntry'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientEffect from 'src/missions/effects/index.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { DetailLargeString } from '../../form/DetailLargeString.tsx'
+import { DetailLocked } from '../../form/DetailLocked.tsx'
+import { DetailString } from '../../form/DetailString.tsx'
+import { ButtonText } from '../../user-controls/buttons/ButtonText.tsx'
+import ArgEntry from '../target-effects/ArgEntry.tsx'
 import './index.scss'
-import EntryNavigation from './navigation/EntryNavigation'
+import EntryNavigation from './navigation/EntryNavigation.tsx'
 
 /**
  * Entry fields for an effect.

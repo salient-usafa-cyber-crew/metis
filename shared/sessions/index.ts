@@ -3,10 +3,14 @@ import {
   TCommonMissionJson,
   TCommonMissionTypes,
   TMission,
-} from 'metis/missions'
-import { TAction, TCommonMissionAction } from '../missions/actions'
-import { TCommonUser } from '../users'
-import { TCommonSessionMember, TMember, TSessionMemberJson } from './members'
+} from 'metis/missions/index.ts'
+import { TAction, TCommonMissionAction } from '../missions/actions/index.ts'
+import { TCommonUser } from '../users/index.ts'
+import {
+  TCommonSessionMember,
+  TMember,
+  TSessionMemberJson,
+} from './members/index.ts'
 
 /**
  * Base class for sessions. Represents a session of a mission being executed by users.

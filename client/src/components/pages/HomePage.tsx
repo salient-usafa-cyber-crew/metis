@@ -1,24 +1,24 @@
 import { AxiosError } from 'axios'
 import { useRef, useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import ClientMission from 'src/missions'
-import Notification from 'src/notifications'
-import SessionClient from 'src/sessions'
-import { SessionBasic } from 'src/sessions/basic'
-import { compute } from 'src/toolbox'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientMission from 'src/missions/index.ts'
+import Notification from 'src/notifications/index.ts'
+import { SessionBasic } from 'src/sessions/basic.ts'
+import SessionClient from 'src/sessions/index.ts'
 import {
   useMountHandler,
   useRequireLogin,
   useUnmountHandler,
-} from 'src/toolbox/hooks'
-import ClientUser from 'src/users'
-import { DefaultLayout } from '.'
-import Prompt from '../content/communication/Prompt'
-import MissionList from '../content/data/lists/options/MissionList'
-import SessionList from '../content/data/lists/options/SessionList'
-import UserList from '../content/data/lists/options/UserList'
-import { LogoutLink } from '../content/general-layout/Navigation'
+} from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import ClientUser from 'src/users/index.ts'
+import Prompt from '../content/communication/Prompt.tsx'
+import MissionList from '../content/data/lists/options/MissionList.tsx'
+import SessionList from '../content/data/lists/options/SessionList.tsx'
+import UserList from '../content/data/lists/options/UserList.tsx'
+import { LogoutLink } from '../content/general-layout/Navigation.tsx'
 import './HomePage.scss'
+import { DefaultLayout } from './index.tsx'
 
 /* -- constants -- */
 

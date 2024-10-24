@@ -1,5 +1,5 @@
 import fs from 'fs'
-import MetisServer from 'metis/server'
+import MetisServer from 'metis/server/index.ts'
 
 /* -- CLASSES -- */
 

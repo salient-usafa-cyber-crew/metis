@@ -1,20 +1,20 @@
-import MissionAction, {
-  TCommonMissionActionJson,
-  TMissionActionOptions,
-} from 'metis/missions/actions'
 import IActionExecution, {
   TActionExecutionJson,
   TExecutionCheats,
-} from 'metis/missions/actions/executions'
-import { TCommonEffectJson } from 'metis/missions/effects'
-import { TTargetEnvContextAction } from 'metis/server/target-environments/context-provider'
-import { TSessionConfig } from 'metis/sessions'
+} from 'metis/missions/actions/executions.ts'
+import MissionAction, {
+  TCommonMissionActionJson,
+  TMissionActionOptions,
+} from 'metis/missions/actions/index.ts'
+import { TCommonEffectJson } from 'metis/missions/effects/index.ts'
+import { TTargetEnvContextAction } from 'metis/server/target-environments/context-provider.ts'
+import { TSessionConfig } from 'metis/sessions/index.ts'
 import seedrandom, { PRNG } from 'seedrandom'
-import { TServerMissionTypes } from '..'
-import ServerEffect, { TServerEffectOptions } from '../effects'
-import ServerMissionNode from '../nodes'
-import ServerActionExecution from './executions'
-import { ServerPotentialOutcome, ServerRealizedOutcome } from './outcomes'
+import ServerEffect, { TServerEffectOptions } from '../effects/index.ts'
+import { TServerMissionTypes } from '../index.ts'
+import { ServerMissionNode } from '../nodes/index.ts'
+import ServerActionExecution from './executions.ts'
+import { ServerPotentialOutcome, ServerRealizedOutcome } from './outcomes.ts'
 
 /**
  * Class for managing mission actions on the server.

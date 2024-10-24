@@ -1,8 +1,8 @@
 import axios, { AxiosRequestConfig } from 'axios'
 import fs from 'fs'
 import https from 'https'
-import { Api } from '.'
-import { AnyObject } from '../toolbox/objects'
+import { AnyObject } from '../toolbox/objects.ts'
+import { Api } from './index.ts'
 
 /**
  * The RESTful API class is used to make HTTP requests to target environments.

@@ -1,8 +1,11 @@
-import { TGlobalContext } from 'src/context'
-import { compute } from 'src/toolbox'
-import { TWithKey } from '../../../../../shared/toolbox/objects'
-import { ButtonText, TButtonText_P } from '../user-controls/buttons/ButtonText'
-import Branding from './Branding'
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
+import { TGlobalContext } from 'src/context/index.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import {
+  ButtonText,
+  TButtonText_P,
+} from '../user-controls/buttons/ButtonText.tsx'
+import Branding from './Branding.tsx'
 import './Navigation.scss'
 
 /* -- components -- */

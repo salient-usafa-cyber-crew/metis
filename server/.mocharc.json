@@ -1,0 +1,7 @@
+{
+  "require": "tsx",
+  "extensions": ["ts"],
+  "file": "test/index.ts",
+  "timeout": 30000,
+  "exit": true
+}

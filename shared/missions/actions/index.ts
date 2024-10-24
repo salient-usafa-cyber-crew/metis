@@ -1,13 +1,13 @@
 import { v4 as generateHash } from 'uuid'
-import { TCommonMission, TCommonMissionTypes, TMission } from '..'
 import {
   TCommonEffect,
   TCommonEffectJson,
   TEffect,
   TEffectOptions,
-} from '../effects'
-import { TCommonMissionForce, TForce } from '../forces'
-import { TCommonMissionNode, TNode } from '../nodes'
+} from '../effects/index.ts'
+import { TCommonMissionForce, TForce } from '../forces/index.ts'
+import { TCommonMission, TCommonMissionTypes, TMission } from '../index.ts'
+import { TCommonMissionNode, TNode } from '../nodes/index.ts'
 
 /**
  * An action that can be executed on a mission node, causing a certain effect.

@@ -1,19 +1,18 @@
+import Session from 'metis/shared/sessions/index.ts'
+import { SingleTypeObject } from 'metis/shared/toolbox/objects.ts'
 import { useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import ClientMission, { TMissionComponent } from 'src/missions'
-import SessionClient from 'src/sessions'
-import { compute } from 'src/toolbox'
-import { useMountHandler, useRequireLogin } from 'src/toolbox/hooks'
-import { DefaultLayout } from '.'
-
-import Session from '../../../../shared/sessions'
-import { SingleTypeObject } from '../../../../shared/toolbox/objects'
-import { ESortByMethod } from '../content/general-layout/ListOld'
-import { HomeLink, TNavigation } from '../content/general-layout/Navigation'
-import SessionConfig from '../content/session/SessionConfig'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientMission, { TMissionComponent } from 'src/missions/index.ts'
+import SessionClient from 'src/sessions/index.ts'
+import { useMountHandler, useRequireLogin } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import { ESortByMethod } from '../content/general-layout/ListOld.tsx'
+import { HomeLink, TNavigation } from '../content/general-layout/Navigation.tsx'
+import SessionConfig from '../content/session/SessionConfig.tsx'
 import ButtonSvgPanel, {
   TValidPanelButton,
-} from '../content/user-controls/buttons/ButtonSvgPanel'
+} from '../content/user-controls/buttons/ButtonSvgPanel.tsx'
+import { DefaultLayout } from './index.tsx'
 import './LaunchPage.scss'
 
 /**

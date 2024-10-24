@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import { compute } from 'src/toolbox'
-import inputs from 'src/toolbox/inputs'
-import { TDetail_P } from '.'
-import Tooltip from '../communication/Tooltip'
+import { compute } from 'src/toolbox/index.ts'
+import inputs from 'src/toolbox/inputs.ts'
+import Tooltip from '../communication/Tooltip.tsx'
 import './DetailNumber.scss'
+import { TDetail_P } from './index.ts'
 
 /**
  * This will render a detail for

@@ -1,7 +1,7 @@
-import { Vector1D, Vector2D } from '../../../../../../shared/toolbox/space'
-import './Scene.scss'
-import { compute } from 'src/toolbox'
+import { Vector1D, Vector2D } from 'metis/shared/toolbox/space.ts'
 import React from 'react'
+import { compute } from 'src/toolbox/index.ts'
+import './Scene.scss'
 
 /**
  * A scene/world containing scene objects that can

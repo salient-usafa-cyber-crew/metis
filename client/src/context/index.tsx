@@ -1,30 +1,32 @@
-import React, { ReactNode, useEffect, useRef, useState } from 'react'
-import { TAppError, TAppErrorNotifyMethod } from 'src/components/App'
-import { message as connectionStatusMessage } from 'src/components/content/communication/ConnectionStatus'
-import {
-  TPromptResult,
-  TPrompt_P,
-} from 'src/components/content/communication/Prompt'
-import { TButtonMenu_P } from 'src/components/content/user-controls/buttons/ButtonMenu'
-import { TButtonSvgType } from 'src/components/content/user-controls/buttons/ButtonSvg'
-import { TButtonText_P } from 'src/components/content/user-controls/buttons/ButtonText'
-import { PAGE_REGISTRY, TPage_P } from 'src/components/pages'
-import ServerConnection, { IServerConnectionOptions } from 'src/connect/servers'
-import MetisInfo from 'src/info'
-import ClientLogin from 'src/logins'
-import Notification from 'src/notifications'
-import ClientUser from 'src/users'
-import { v4 as generateHash } from 'uuid'
-import { TResponseEvents, TServerEvents } from '../../../shared/connect/data'
-import { ServerEmittedError } from '../../../shared/connect/errors'
-import { TLogin } from '../../../shared/logins'
-import { TExecutionCheats } from '../../../shared/missions/actions/executions'
+import { TResponseEvents, TServerEvents } from 'metis/shared/connect/data.ts'
+import { ServerEmittedError } from 'metis/shared/connect/errors.ts'
+import { TLogin } from 'metis/shared/logins/index.ts'
+import { TExecutionCheats } from 'metis/shared/missions/actions/executions.ts'
 import ObjectToolbox, {
   AnyObject,
   TWithKey,
-} from '../../../shared/toolbox/objects'
-import { Vector2D } from '../../../shared/toolbox/space'
-import StringToolbox from '../../../shared/toolbox/strings'
+} from 'metis/shared/toolbox/objects.ts'
+import { Vector2D } from 'metis/shared/toolbox/space.ts'
+import StringToolbox from 'metis/shared/toolbox/strings.ts'
+import React, { ReactNode, useEffect, useRef, useState } from 'react'
+import { TAppError, TAppErrorNotifyMethod } from 'src/components/App.tsx'
+import { message as connectionStatusMessage } from 'src/components/content/communication/ConnectionStatus.tsx'
+import {
+  TPromptResult,
+  TPrompt_P,
+} from 'src/components/content/communication/Prompt.tsx'
+import { TButtonMenu_P } from 'src/components/content/user-controls/buttons/ButtonMenu.tsx'
+import { TButtonSvgType } from 'src/components/content/user-controls/buttons/ButtonSvg.tsx'
+import { TButtonText_P } from 'src/components/content/user-controls/buttons/ButtonText.tsx'
+import { PAGE_REGISTRY, TPage_P } from 'src/components/pages/index.tsx'
+import ServerConnection, {
+  IServerConnectionOptions,
+} from 'src/connect/servers.ts'
+import MetisInfo from 'src/info/index.ts'
+import ClientLogin from 'src/logins/index.ts'
+import Notification from 'src/notifications/index.ts'
+import ClientUser from 'src/users/index.ts'
+import { v4 as generateHash } from 'uuid'
 
 /* -- constants -- */
 

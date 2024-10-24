@@ -1,18 +1,21 @@
 {
   "name": "metis",
   "description": "",
-  "main": "index.ts",
+  "exports": "./index.ts",
+  "type": "module",
   "scripts": {},
   "author": "Jordan M. Stokes",
   "license": "ISC",
   "dependencies": {
     "@types/axios": "^0.14.0",
-    "@types/dateformat": "^5.0.2",
     "@types/seedrandom": "^3.0.2",
-    "@types/uuid": "^9.0.2",
+    "@types/uuid": "^10.0.0",
     "axios": "^1.5.0",
     "dateformat": "^5.0.3",
     "seedrandom": "^3.0.5",
-    "uuid": "^9.0.0"
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/dateformat": "^5.0.2"
   }
 }

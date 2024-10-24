@@ -1,43 +1,46 @@
+import Mission from 'metis/shared/missions/index.ts'
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
 import { useEffect, useState } from 'react'
 import { useBeforeunload } from 'react-beforeunload'
-import { useGlobalContext, useNavigationMiddleware } from 'src/context'
-import ClientMission, { TMissionNavigable } from 'src/missions'
-import ClientMissionAction from 'src/missions/actions'
-import { ClientEffect } from 'src/missions/effects'
-import ClientMissionForce from 'src/missions/forces'
-import ClientMissionNode from 'src/missions/nodes'
+import {
+  useGlobalContext,
+  useNavigationMiddleware,
+} from 'src/context/index.tsx'
+import ClientMissionAction from 'src/missions/actions/index.ts'
+import ClientEffect from 'src/missions/effects/index.ts'
+import ClientMissionForce from 'src/missions/forces/index.ts'
+import ClientMission, { TMissionNavigable } from 'src/missions/index.ts'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
 import ClientMissionPrototype, {
   TPrototypeDeleteMethod,
-} from 'src/missions/nodes/prototypes'
-import PrototypeCreation from 'src/missions/transformations/creations'
-import PrototypeTranslation from 'src/missions/transformations/translations'
-import { compute } from 'src/toolbox'
+} from 'src/missions/nodes/prototypes.ts'
+import PrototypeCreation from 'src/missions/transformations/creations.ts'
+import PrototypeTranslation from 'src/missions/transformations/translations.ts'
 import {
   useEventListener,
   useMountHandler,
   useRequireLogin,
-} from 'src/toolbox/hooks'
-import { DefaultLayout, TPage_P } from '.'
-import Mission from '../../../../shared/missions'
-import { TWithKey } from '../../../../shared/toolbox/objects'
-import Prompt from '../content/communication/Prompt'
-import ActionEntry from '../content/edit-mission/entries/ActionEntry'
-import EffectEntry from '../content/edit-mission/entries/EffectEntry'
-import ForceEntry from '../content/edit-mission/entries/ForceEntry'
-import MissionEntry from '../content/edit-mission/entries/MissionEntry'
-import NodeEntry from '../content/edit-mission/entries/NodeEntry'
-import NodeStructuring from '../content/edit-mission/entries/NodeStructuring'
-import PrototypeEntry from '../content/edit-mission/entries/PrototypeEntry'
-import { HomeLink, TNavigation } from '../content/general-layout/Navigation'
+} from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Prompt from '../content/communication/Prompt.tsx'
+import ActionEntry from '../content/edit-mission/entries/ActionEntry.tsx'
+import EffectEntry from '../content/edit-mission/entries/EffectEntry.tsx'
+import ForceEntry from '../content/edit-mission/entries/ForceEntry.tsx'
+import MissionEntry from '../content/edit-mission/entries/MissionEntry.tsx'
+import NodeEntry from '../content/edit-mission/entries/NodeEntry.tsx'
+import NodeStructuring from '../content/edit-mission/entries/NodeStructuring.tsx'
+import PrototypeEntry from '../content/edit-mission/entries/PrototypeEntry.tsx'
+import { HomeLink, TNavigation } from '../content/general-layout/Navigation.tsx'
 import {
   EPanelSizingMode,
   PanelSizeRelationship,
   ResizablePanel,
-} from '../content/general-layout/ResizablePanels'
-import MissionMap from '../content/session/mission-map'
-import { TPrototypeButton } from '../content/session/mission-map/objects/MissionPrototype'
-import CreateEffect from '../content/session/mission-map/ui/overlay/modals/CreateEffect'
-import { TButtonSvg_P } from '../content/user-controls/buttons/ButtonSvg'
+} from '../content/general-layout/ResizablePanels.tsx'
+import MissionMap from '../content/session/mission-map/index.tsx'
+import { TPrototypeButton } from '../content/session/mission-map/objects/MissionPrototype.tsx'
+import CreateEffect from '../content/session/mission-map/ui/overlay/modals/CreateEffect.tsx'
+import { TButtonSvg_P } from '../content/user-controls/buttons/ButtonSvg.tsx'
+import { DefaultLayout, TPage_P } from './index.tsx'
 import './MissionPage.scss'
 
 /**

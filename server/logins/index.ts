@@ -1,7 +1,7 @@
-import { ServerEmittedError } from 'metis/connect/errors'
-import { TLoginJson } from 'metis/logins'
-import ClientConnection from 'metis/server/connect/clients'
-import ServerUser from '../users'
+import { ServerEmittedError } from 'metis/connect/errors.ts'
+import { TLoginJson } from 'metis/logins/index.ts'
+import ClientConnection from 'metis/server/connect/clients.ts'
+import ServerUser from '../users/index.ts'
 
 /**
  * Express sessions are limited in what they can store. This class expands the functionality of logins in METIS.

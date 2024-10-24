@@ -1,4 +1,4 @@
-import { DateToolbox } from '../../../shared/toolbox/dates'
+import { DateToolbox } from 'metis/shared/toolbox/dates.ts'
 
 /**
  * Creates a universal standard for logging to

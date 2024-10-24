@@ -1,8 +1,8 @@
 import { ReactNode, useEffect, useState } from 'react'
-import { compute } from 'src/toolbox'
-import { TDetailBase_P, TDetailOptional_P, TDetailRequired_P } from '.'
-import Tooltip from '../communication/Tooltip'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../communication/Tooltip.tsx'
 import './DetailDropdown.scss'
+import { TDetailBase_P, TDetailOptional_P, TDetailRequired_P } from './index.ts'
 
 /**
  * This will render a detail for

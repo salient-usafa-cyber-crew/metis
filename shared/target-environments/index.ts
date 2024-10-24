@@ -1,5 +1,5 @@
-import { TCommonMissionTypes } from 'metis/missions'
-import Target, { TCommonTarget, TCommonTargetJson, TTarget } from './targets'
+import { TCommonMissionTypes } from 'metis/missions/index.ts'
+import Target, { TCommonTarget, TCommonTargetJson, TTarget } from './targets.ts'
 
 /**
  * This is the environment in which the target(s) exist.

@@ -1,10 +1,10 @@
 import IActionOutcome, {
   TActionOutcomeJson,
-} from 'metis/missions/actions/outcomes'
+} from 'metis/missions/actions/outcomes.ts'
 import { PRNG } from 'seedrandom'
-import ServerMissionAction from '.'
-import { TServerMissionTypes } from '..'
-import ServerMissionNode from '../nodes'
+import { TServerMissionTypes } from '../index.ts'
+import { ServerMissionNode } from '../nodes/index.ts'
+import ServerMissionAction from './index.ts'
 
 /**
  * An outcome for the execution of an action via the Mission.execute method.

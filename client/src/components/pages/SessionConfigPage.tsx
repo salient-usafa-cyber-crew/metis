@@ -1,12 +1,15 @@
 import { useRef, useState } from 'react'
-import { useGlobalContext, useNavigationMiddleware } from 'src/context'
-import SessionClient from 'src/sessions'
-import { compute } from 'src/toolbox'
-import { useEventListener, useMountHandler } from 'src/toolbox/hooks'
-import { DefaultLayout } from '.'
-import Prompt from '../content/communication/Prompt'
-import { HomeLink, TNavigation } from '../content/general-layout/Navigation'
-import SessionConfig from '../content/session/SessionConfig'
+import {
+  useGlobalContext,
+  useNavigationMiddleware,
+} from 'src/context/index.tsx'
+import SessionClient from 'src/sessions/index.ts'
+import { useEventListener, useMountHandler } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Prompt from '../content/communication/Prompt.tsx'
+import { HomeLink, TNavigation } from '../content/general-layout/Navigation.tsx'
+import SessionConfig from '../content/session/SessionConfig.tsx'
+import { DefaultLayout } from './index.tsx'
 import './SessionConfigPage.scss'
 
 export default function SessionConfigPage({

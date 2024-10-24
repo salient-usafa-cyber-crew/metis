@@ -1,11 +1,15 @@
-import { TClientMissionTypes, TMissionComponent, TMissionNavigable } from '..'
 import MissionAction, {
   TCommonMissionActionJson,
   TMissionActionOptions,
-} from '../../../../shared/missions/actions'
-import { TCommonEffectJson } from '../../../../shared/missions/effects'
-import { ClientEffect, TClientEffectOptions } from '../effects'
-import ClientMissionNode from '../nodes'
+} from 'metis/shared/missions/actions/index.ts'
+import { TCommonEffectJson } from 'metis/shared/missions/effects/index.ts'
+import ClientEffect, { TClientEffectOptions } from '../effects/index.ts'
+import {
+  TClientMissionTypes,
+  TMissionComponent,
+  TMissionNavigable,
+} from '../index.ts'
+import ClientMissionNode from '../nodes/index.ts'
 
 /**
  * Class representing a mission action on the client-side.

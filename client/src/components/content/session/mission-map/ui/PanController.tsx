@@ -1,7 +1,7 @@
-import './PanController.scss'
+import { Vector1D, Vector2D } from 'metis/shared/toolbox/space.ts'
 import { useState } from 'react'
-import { Vector1D, Vector2D } from '../../../../../../../shared/toolbox/space'
-import { compute } from 'src/toolbox/'
+import { compute } from 'src/toolbox/index.ts'
+import './PanController.scss'
 
 /**
  * Controls panning of the `MissionMap` component.

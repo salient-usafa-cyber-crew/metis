@@ -1,20 +1,21 @@
 //npm imports
 import { Router } from 'express'
 import { Request, Response } from 'express-serve-static-core'
-import MetisServer from 'metis/server'
-import MetisDatabase from 'metis/server/database'
-import UserModel, { hashPassword } from 'metis/server/database/models/users'
-import { TMetisRouterMap } from 'metis/server/http/router'
-import ServerLogin from 'metis/server/logins'
-import defineRequests, {
+import MetisDatabase from 'metis/server/database/index.ts'
+import UserModel, { hashPassword } from 'metis/server/database/models/users.ts'
+import { TMetisRouterMap } from 'metis/server/http/router.ts'
+import MetisServer from 'metis/server/index.ts'
+import ServerLogin from 'metis/server/logins/index.ts'
+import {
+  defineRequests,
   RequestBodyFilters,
-} from 'metis/server/middleware/requests'
+} from 'metis/server/middleware/requests.ts'
 import {
   auth,
   restrictPasswordReset,
   restrictUserManagement,
-} from 'metis/server/middleware/users'
-import { databaseLogger } from '../../logging'
+} from 'metis/server/middleware/users.ts'
+import { databaseLogger } from '../../logging/index.ts'
 
 const routerMap: TMetisRouterMap = (
   router: Router,

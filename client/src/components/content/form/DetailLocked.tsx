@@ -1,7 +1,7 @@
-import { compute } from 'src/toolbox'
-import { TDetailBase_P } from '.'
-import Tooltip from '../communication/Tooltip'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../communication/Tooltip.tsx'
 import './DetailLocked.scss'
+import { TDetailBase_P } from './index.ts'
 
 /**
  * This will render a detail for a form,

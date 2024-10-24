@@ -1,8 +1,8 @@
+import { TStringArg } from 'metis/shared/target-environments/args/string-arg.ts'
 import { useEffect, useState } from 'react'
-import { ClientEffect } from 'src/missions/effects'
-import { usePostInitEffect } from 'src/toolbox/hooks'
-import { TStringArg } from '../../../../../../shared/target-environments/args/string-arg'
-import { DetailString } from '../../form/DetailString'
+import ClientEffect from 'src/missions/effects/index.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { DetailString } from '../../form/DetailString.tsx'
 
 /**
  * Renders a string input box for the argument whose type is `"string"`.

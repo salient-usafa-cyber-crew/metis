@@ -1,15 +1,15 @@
+import { TNodeExecutionState } from 'metis/shared/missions/nodes/index.ts'
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
+import { Vector1D } from 'metis/shared/toolbox/space.ts'
+import StringToolbox from 'metis/shared/toolbox/strings.ts'
 import { useState } from 'react'
-import Tooltip from 'src/components/content/communication/Tooltip'
+import Tooltip from 'src/components/content/communication/Tooltip.tsx'
 import ButtonSvg, {
   TButtonSvg_P,
-} from 'src/components/content/user-controls/buttons/ButtonSvg'
-import ClientMissionNode from 'src/missions/nodes'
-import { compute } from 'src/toolbox'
-import { useEventListener, useInlineStyling } from 'src/toolbox/hooks'
-import { TNodeExecutionState } from '../../../../../../../shared/missions/nodes'
-import { TWithKey } from '../../../../../../../shared/toolbox/objects'
-import { Vector1D } from '../../../../../../../shared/toolbox/space'
-import StringToolbox from '../../../../../../../shared/toolbox/strings'
+} from 'src/components/content/user-controls/buttons/ButtonSvg.tsx'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
+import { useEventListener, useInlineStyling } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
 import './MissionNode.scss'
 
 /* -- CONSTANTS -- */

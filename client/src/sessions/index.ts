@@ -1,28 +1,28 @@
 import axios from 'axios'
-import ServerConnection from 'src/connect/servers'
-import ClientMission, { TClientMissionTypes } from 'src/missions'
-import ClientMissionAction from 'src/missions/actions'
-import ClientOutput from 'src/missions/forces/output'
-import ClientMissionNode from 'src/missions/nodes'
-import ClientMissionPrototype from 'src/missions/nodes/prototypes'
-import ClientUser from 'src/users'
 import {
   TGenericServerEvents,
   TResponseEvents,
   TServerEvents,
-} from '../../../shared/connect/data'
-import { TExecutionCheats } from '../../../shared/missions/actions/executions'
+} from 'metis/shared/connect/data.ts'
+import { TExecutionCheats } from 'metis/shared/missions/actions/executions.ts'
 import Session, {
   TSessionBasicJson,
   TSessionConfig,
   TSessionJson,
-} from '../../../shared/sessions'
-import { TSessionMemberJson } from '../../../shared/sessions/members'
+} from 'metis/shared/sessions/index.ts'
+import { TSessionMemberJson } from 'metis/shared/sessions/members/index.ts'
 import MemberRole, {
   TMemberRoleId,
-} from '../../../shared/sessions/members/roles'
-import { SessionBasic } from './basic'
-import ClientSessionMember from './members'
+} from 'metis/shared/sessions/members/roles.ts'
+import ServerConnection from 'src/connect/servers.ts'
+import ClientMissionAction from 'src/missions/actions/index.ts'
+import ClientOutput from 'src/missions/forces/output.ts'
+import ClientMission, { TClientMissionTypes } from 'src/missions/index.ts'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
+import ClientMissionPrototype from 'src/missions/nodes/prototypes.ts'
+import ClientUser from 'src/users/index.ts'
+import { SessionBasic } from './basic.ts'
+import ClientSessionMember from './members.ts'
 
 /**
  * Client instance for sessions. Handles client-side logic for sessions. Communicates with server to conduct a session.
@@ -969,7 +969,7 @@ export default class SessionClient extends Session<TClientMissionTypes> {
   private onSendOutput = (event: TServerEvents['send-output']): void => {
     // Extract data.
     let { outputData } = event.data
-    let { type, forceId } = outputData
+    let { key, forceId } = outputData
 
     // Find the force given the ID.
     let force = this.mission.getForce(forceId)
@@ -977,7 +977,7 @@ export default class SessionClient extends Session<TClientMissionTypes> {
     // If the force is undefined, throw an error.
     if (!force) {
       throw new Error(
-        `Could not send output with type "${type}" to the force with ID "${forceId}" because the force was not found.`,
+        `Could not send output with type "${key}" to the force with ID "${forceId}" because the force was not found.`,
       )
     }
 

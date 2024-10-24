@@ -1,5 +1,5 @@
-import { MissionForce } from '../missions/forces'
-import MissionNode from '../missions/nodes'
+import MissionForce from '../missions/forces/index.ts'
+import MissionNode from '../missions/nodes/index.ts'
 
 /**
  * Represents a dependency that can be found within a target's arguments.

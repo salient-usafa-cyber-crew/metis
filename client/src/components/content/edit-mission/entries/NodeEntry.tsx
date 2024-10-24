@@ -1,27 +1,27 @@
+import { SingleTypeObject } from 'metis/shared/toolbox/objects.ts'
 import { useEffect, useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import ClientMission from 'src/missions'
-import ClientMissionAction from 'src/missions/actions'
-import ClientMissionNode from 'src/missions/nodes'
-import { compute } from 'src/toolbox'
-import { usePostInitEffect, useRequireLogin } from 'src/toolbox/hooks'
-import { SingleTypeObject } from '../../../../../../shared/toolbox/objects'
-import Tooltip from '../../communication/Tooltip'
-import { DetailColorSelector } from '../../form/DetailColorSelector'
-import { DetailLargeString } from '../../form/DetailLargeString'
-import { DetailString } from '../../form/DetailString'
-import { DetailToggle } from '../../form/DetailToggle'
-import ListOld, { ESortByMethod } from '../../general-layout/ListOld'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientMissionAction from 'src/missions/actions/index.ts'
+import ClientMission from 'src/missions/index.ts'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
+import { usePostInitEffect, useRequireLogin } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../../communication/Tooltip.tsx'
+import { DetailColorSelector } from '../../form/DetailColorSelector.tsx'
+import { DetailLargeString } from '../../form/DetailLargeString.tsx'
+import { DetailString } from '../../form/DetailString.tsx'
+import { DetailToggle } from '../../form/DetailToggle.tsx'
+import ListOld, { ESortByMethod } from '../../general-layout/ListOld.tsx'
 import ButtonSvgPanel, {
   TValidPanelButton,
-} from '../../user-controls/buttons/ButtonSvgPanel'
+} from '../../user-controls/buttons/ButtonSvgPanel.tsx'
 import {
   ButtonText,
   TButtonText_P,
-} from '../../user-controls/buttons/ButtonText'
-import { TToggleLockState } from '../../user-controls/Toggle'
+} from '../../user-controls/buttons/ButtonText.tsx'
+import { TToggleLockState } from '../../user-controls/Toggle.tsx'
 import './index.scss'
-import EntryNavigation from './navigation/EntryNavigation'
+import EntryNavigation from './navigation/EntryNavigation.tsx'
 
 /**
  * This will render the entry fields for a mission-node

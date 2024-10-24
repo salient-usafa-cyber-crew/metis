@@ -1,9 +1,9 @@
-import { useGlobalContext } from 'src/context'
-import { useListComponent } from 'src/toolbox/hooks'
-import { TPage_P } from '.'
-import { TAppError } from '../App'
-import { ButtonText } from '../content/user-controls/buttons/ButtonText'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { useListComponent } from 'src/toolbox/hooks.tsx'
+import { TAppError } from '../App.ts'
+import { ButtonText } from '../content/user-controls/buttons/ButtonText.tsx'
 import './ErrorPage.scss'
+import { TPage_P } from './index.ts'
 
 export interface IErrorPage extends TPage_P {}
 

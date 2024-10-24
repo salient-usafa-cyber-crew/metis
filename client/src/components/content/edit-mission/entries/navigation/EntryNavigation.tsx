@@ -1,6 +1,6 @@
-import Tooltip from 'src/components/content/communication/Tooltip'
-import ClientMission, { TMissionNavigable } from 'src/missions'
-import { compute } from 'src/toolbox'
+import Tooltip from 'src/components/content/communication/Tooltip.tsx'
+import ClientMission, { TMissionNavigable } from 'src/missions/index.ts'
+import { compute } from 'src/toolbox/index.ts'
 import './EntryNavigation.scss'
 
 /**

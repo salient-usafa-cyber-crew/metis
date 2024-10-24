@@ -1,10 +1,10 @@
-import { TCommonMissionTypes } from 'metis/missions'
+import { TCommonMissionTypes } from 'metis/missions/index.ts'
 import { v4 as generateHash } from 'uuid'
-import UserAccess, { TUserAccess } from './accesses'
+import UserAccess, { TUserAccess } from './accesses.ts'
 import UserPermission, {
   TUserPermission,
   TUserPermissionId,
-} from './permissions'
+} from './permissions.ts'
 
 /**
  * Represents a user using METIS.

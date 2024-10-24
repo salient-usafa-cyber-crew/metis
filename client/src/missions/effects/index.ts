@@ -1,19 +1,23 @@
-import { ClientTargetEnvironment } from 'src/target-environments'
-import ClientTarget from 'src/target-environments/targets'
-import { TClientMissionTypes, TMissionComponent, TMissionNavigable } from '..'
 import Effect, {
   TCommonEffectJson,
   TEffectOptions,
-} from '../../../../shared/missions/effects'
-import ForceArg from '../../../../shared/target-environments/args/force-arg'
-import NodeArg from '../../../../shared/target-environments/args/node-arg'
-import ClientMissionAction from '../actions'
+} from 'metis/shared/missions/effects/index.ts'
+import ForceArg from 'metis/shared/target-environments/args/force-arg.ts'
+import NodeArg from 'metis/shared/target-environments/args/node-arg.ts'
+import ClientTargetEnvironment from 'src/target-environments/index.ts'
+import ClientTarget from 'src/target-environments/targets.ts'
+import ClientMissionAction from '../actions/index.ts'
+import {
+  TClientMissionTypes,
+  TMissionComponent,
+  TMissionNavigable,
+} from '../index.ts'
 
 /**
  * Class representing an effect on the client-side that can be
  * applied to a target.
  */
-export class ClientEffect
+export default class ClientEffect
   extends Effect<TClientMissionTypes>
   implements TMissionComponent
 {

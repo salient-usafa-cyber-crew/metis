@@ -1,17 +1,17 @@
+import { SingleTypeObject } from 'metis/shared/toolbox/objects.ts'
 import { useEffect, useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import ClientMission, { TMissionComponent } from 'src/missions'
-import { compute } from 'src/toolbox'
-import { useMountHandler, usePostInitEffect } from 'src/toolbox/hooks'
-import { SingleTypeObject } from '../../../../../../shared/toolbox/objects'
-import Tooltip from '../../communication/Tooltip'
-import { DetailString } from '../../form/DetailString'
-import ListOld, { ESortByMethod } from '../../general-layout/ListOld'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientMission, { TMissionComponent } from 'src/missions/index.ts'
+import { useMountHandler, usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../../communication/Tooltip.tsx'
+import { DetailString } from '../../form/DetailString.tsx'
+import ListOld, { ESortByMethod } from '../../general-layout/ListOld.tsx'
 import ButtonSvgPanel, {
   TValidPanelButton,
-} from '../../user-controls/buttons/ButtonSvgPanel'
+} from '../../user-controls/buttons/ButtonSvgPanel.tsx'
 import './index.scss'
-import EntryNavigation from './navigation/EntryNavigation'
+import EntryNavigation from './navigation/EntryNavigation.tsx'
 
 /**
  * This will render the basic editable details of the mission itself.

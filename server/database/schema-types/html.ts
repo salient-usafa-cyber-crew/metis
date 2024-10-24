@@ -1,5 +1,5 @@
 import DOMPurify from 'isomorphic-dompurify'
-import { databaseLogger } from 'metis/server/logging'
+import { databaseLogger } from 'metis/server/logging/index.ts'
 import mongoose from 'mongoose'
 
 /**

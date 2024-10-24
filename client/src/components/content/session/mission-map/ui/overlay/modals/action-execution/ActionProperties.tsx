@@ -1,9 +1,9 @@
+import { TExecutionCheats } from 'metis/shared/missions/actions/executions.ts'
 import { useState } from 'react'
-import RichTextOutputBox from 'src/components/content/communication/RichTextOutputBox'
-import ClientMissionAction from 'src/missions/actions'
-import { compute } from 'src/toolbox'
-import { useEventListener } from 'src/toolbox/hooks'
-import { TExecutionCheats } from '../../../../../../../../../../shared/missions/actions/executions'
+import RichTextOutputBox from 'src/components/content/communication/RichTextOutputBox.tsx'
+import ClientMissionAction from 'src/missions/actions/index.ts'
+import { useEventListener } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
 import './ActionProperties.scss'
 
 /**

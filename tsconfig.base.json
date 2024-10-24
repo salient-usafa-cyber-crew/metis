@@ -1,18 +1,24 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "NodeNext",
+    "useDefineForClassFields": true,
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": false,
     "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "NodeNext",
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
-    "noEmit": true
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true
   }
 }

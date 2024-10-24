@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
-import ClientUser from 'src/users'
-import { TLogin, TLoginJson } from '../../../shared/logins'
-import { TCommonUser } from '../../../shared/users'
+import { TLogin, TLoginJson } from 'metis/shared/logins/index.ts'
+import { TCommonUser } from 'metis/shared/users/index.ts'
+import ClientUser from 'src/users/index.ts'
 
 export default class ClientLogin {
   /**

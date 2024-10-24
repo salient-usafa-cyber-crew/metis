@@ -1,6 +1,6 @@
-import { ServerEmittedError } from 'metis/connect/errors'
-import { TMetisWsMiddleware } from '..'
-import ServerLogin from '../../logins'
+import { ServerEmittedError } from 'metis/connect/errors.ts'
+import ServerLogin from '../../logins/index.ts'
+import { TMetisWsMiddleware } from '../index.ts'
 
 /**
  * Middleware that authenticates the user attempting

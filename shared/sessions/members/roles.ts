@@ -1,5 +1,5 @@
-import { TSessionAuthParam } from '.'
-import MemberPermission from './permissions'
+import { TSessionAuthParam } from './index.ts'
+import MemberPermission from './permissions.ts'
 
 /* -- CONSTANTS -- */
 

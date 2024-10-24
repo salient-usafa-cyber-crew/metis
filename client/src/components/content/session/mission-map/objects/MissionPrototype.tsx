@@ -1,15 +1,15 @@
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
+import { Vector1D } from 'metis/shared/toolbox/space.ts'
 import { useState } from 'react'
-import Tooltip from 'src/components/content/communication/Tooltip'
+import Tooltip from 'src/components/content/communication/Tooltip.tsx'
 import ButtonSvg, {
   TButtonSvg_P,
-} from 'src/components/content/user-controls/buttons/ButtonSvg'
-import ClientMissionNode from 'src/missions/nodes'
-import ClientMissionPrototype from 'src/missions/nodes/prototypes'
-import { compute } from 'src/toolbox'
-import { useEventListener, useInlineStyling } from 'src/toolbox/hooks'
-import { TWithKey } from '../../../../../../../shared/toolbox/objects'
-import { Vector1D } from '../../../../../../../shared/toolbox/space'
-import { MAX_NODE_CONTENT_ZOOM } from './MissionNode'
+} from 'src/components/content/user-controls/buttons/ButtonSvg.tsx'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
+import ClientMissionPrototype from 'src/missions/nodes/prototypes.ts'
+import { useEventListener, useInlineStyling } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import { MAX_NODE_CONTENT_ZOOM } from './MissionNode.tsx'
 import './MissionPrototype.scss'
 
 /* -- constants -- */

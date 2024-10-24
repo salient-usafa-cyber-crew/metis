@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
-import { compute } from 'src/toolbox'
-import { useListContext } from '../List'
-import ListColumnLabels from './ListColumnLabels'
-import ListItem, { TListItem } from './ListItem'
+import { compute } from 'src/toolbox/index.ts'
+import { useListContext } from '../List.tsx'
+import ListColumnLabels from './ListColumnLabels.tsx'
+import ListItem, { TListItem } from './ListItem.tsx'
 import './ListPage.scss'
 
 /**

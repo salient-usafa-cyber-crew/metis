@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
-import { useGlobalContext } from 'src/context'
-import { useMountHandler } from 'src/toolbox/hooks'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { useMountHandler } from 'src/toolbox/hooks.tsx'
 import './Tooltip.scss'
 
 /* -- CONSTANTS -- */

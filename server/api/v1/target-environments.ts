@@ -1,9 +1,9 @@
 import { Router } from 'express'
 import { Request, Response } from 'express-serve-static-core'
-import MetisServer from 'metis/server'
-import { TMetisRouterMap } from 'metis/server/http/router'
-import { auth } from 'metis/server/middleware/users'
-import ServerTargetEnvironment from 'metis/server/target-environments'
+import { TMetisRouterMap } from 'metis/server/http/router.ts'
+import MetisServer from 'metis/server/index.ts'
+import { auth } from 'metis/server/middleware/users.ts'
+import ServerTargetEnvironment from 'metis/server/target-environments/index.ts'
 
 export const routerMap: TMetisRouterMap = (
   router: Router,

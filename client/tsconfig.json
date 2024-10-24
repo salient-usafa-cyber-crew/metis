@@ -2,12 +2,42 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "baseUrl": "."
-    // "paths": {
-    //   "*": ["../node_modules/*"],
-    //   "src/*": ["*"],
-    //   "metis/*": ["../../shared/*"]
-    // }
+    "baseUrl": ".",
+    "paths": {
+      "metis/server/*": [
+        "../../../../../../../../server/*",
+        "../../../../../../../server/*",
+        "../../../../../../server/*",
+        "../../../../../server/*",
+        "../../../../server/*",
+        "../../../server/*",
+        "../../server/*",
+        "../server/*",
+        "server/*"
+      ],
+      "metis/*": [
+        "../../../../../../../../shared/*",
+        "../../../../../../../shared/*",
+        "../../../../../../shared/*",
+        "../../../../../shared/*",
+        "../../../../shared/*",
+        "../../../shared/*",
+        "../../shared/*",
+        "../shared/*",
+        "shared/*"
+      ],
+      "metis/shared/*": [
+        "../../../../../../../../shared/*",
+        "../../../../../../../shared/*",
+        "../../../../../../shared/*",
+        "../../../../../shared/*",
+        "../../../../shared/*",
+        "../../../shared/*",
+        "../../shared/*",
+        "../shared/*",
+        "shared/*"
+      ]
+    }
   },
-  "include": ["src", "src/setupProxy.js", "src/global.d.ts"]
+  "include": ["src", "src/other.js", "src/global.d.ts", "vite-env.d.ts"]
 }

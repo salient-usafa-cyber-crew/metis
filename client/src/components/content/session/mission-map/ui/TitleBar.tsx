@@ -1,6 +1,6 @@
-import { TButtonSvg_P } from 'src/components/content/user-controls/buttons/ButtonSvg'
-import ButtonSvgPanel from 'src/components/content/user-controls/buttons/ButtonSvgPanel'
-import { TWithKey } from '../../../../../../../shared/toolbox/objects'
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
+import { TButtonSvg_P } from 'src/components/content/user-controls/buttons/ButtonSvg.tsx'
+import ButtonSvgPanel from 'src/components/content/user-controls/buttons/ButtonSvgPanel.tsx'
 import './TitleBar.scss'
 
 /**

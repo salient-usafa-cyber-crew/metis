@@ -1,7 +1,7 @@
-import { useListContext } from '../List'
-import ListPageControls from '../pages/ListPageControls'
-import ListButtons from './ListButtons'
-import ListFiltering from './ListFiltering'
+import { useListContext } from '../List.tsx'
+import ListPageControls from '../pages/ListPageControls.tsx'
+import ListButtons from './ListButtons.tsx'
+import ListFiltering from './ListFiltering.tsx'
 import './ListNav.scss'
 
 export default function ListNav(): JSX.Element | null {

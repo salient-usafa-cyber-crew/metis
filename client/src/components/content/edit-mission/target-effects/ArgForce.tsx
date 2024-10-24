@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react'
-import { ClientEffect } from 'src/missions/effects'
-import ClientMissionForce from 'src/missions/forces'
-import { compute } from 'src/toolbox'
-import { usePostInitEffect } from 'src/toolbox/hooks'
 import ForceArg, {
   TForceArg,
-} from '../../../../../../shared/target-environments/args/force-arg'
-import { DetailDropdown } from '../../form/DetailDropdown'
+} from 'metis/shared/target-environments/args/force-arg.ts'
+import { useEffect, useState } from 'react'
+import ClientEffect from 'src/missions/effects/index.ts'
+import ClientMissionForce from 'src/missions/forces/index.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import { DetailDropdown } from '../../form/DetailDropdown.tsx'
 
 /**
  * Renders a dropdown for the argument whose type is `"force"`.

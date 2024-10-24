@@ -1,17 +1,17 @@
 import axios from 'axios'
-import { TClientMissionTypes } from 'src/missions'
-import ClientUser from 'src/users'
 import TargetEnvironment, {
   TCommonTargetEnvJson,
   TTargetEnvOptions,
-} from '../../../shared/target-environments'
-import { TCommonTargetJson } from '../../../shared/target-environments/targets'
-import ClientTarget from './targets'
+} from 'metis/shared/target-environments/index.ts'
+import { TCommonTargetJson } from 'metis/shared/target-environments/targets.ts'
+import { TClientMissionTypes } from 'src/missions/index.ts'
+import ClientUser from 'src/users/index.ts'
+import ClientTarget from './targets.ts'
 
 /**
  * Class representing a target environment on the client-side.
  */
-export class ClientTargetEnvironment extends TargetEnvironment<TClientMissionTypes> {
+export default class ClientTargetEnvironment extends TargetEnvironment<TClientMissionTypes> {
   /**
    * A registry of all target environments.
    */

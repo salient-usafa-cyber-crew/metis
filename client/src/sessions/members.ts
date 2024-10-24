@@ -1,12 +1,12 @@
-import { TClientMissionTypes } from 'src/missions'
-import ClientUser from 'src/users'
-import SessionClient from '.'
-import { TCommonMissionForce } from '../../../shared/missions/forces'
-import SessionMember from '../../../shared/sessions/members'
+import { TCommonMissionForce } from 'metis/shared/missions/forces/index.ts'
+import SessionMember from 'metis/shared/sessions/members/index.ts'
 import MemberRole, {
   TMemberRoleId,
-} from '../../../shared/sessions/members/roles'
-import { TCommonUser } from '../../../shared/users'
+} from 'metis/shared/sessions/members/roles.ts'
+import { TCommonUser } from 'metis/shared/users/index.ts'
+import { TClientMissionTypes } from 'src/missions/index.ts'
+import ClientUser from 'src/users/index.ts'
+import SessionClient from './index.ts'
 
 /**
  * Client-side representation of a session member.

@@ -1,21 +1,21 @@
+import MapToolbox from 'metis/shared/toolbox/maps.ts'
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
 import { useEffect, useRef, useState } from 'react'
+import Tooltip from 'src/components/content/communication/Tooltip.tsx'
 import {
   ButtonText,
   TButtonText_P,
-} from 'src/components/content/user-controls/buttons/ButtonText'
-import { useGlobalContext } from 'src/context'
-import ClientMissionAction from 'src/missions/actions'
-import ClientMissionNode from 'src/missions/nodes'
-import SessionClient from 'src/sessions'
-import { compute } from 'src/toolbox'
-import { useEventListener, useMountHandler } from 'src/toolbox/hooks'
-import MapToolbox from '../../../../../../../../../../shared/toolbox/maps'
-import { TWithKey } from '../../../../../../../../../../shared/toolbox/objects'
-import Tooltip from '../../../../../../communication/Tooltip'
+} from 'src/components/content/user-controls/buttons/ButtonText.tsx'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientMissionAction from 'src/missions/actions/index.ts'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
+import SessionClient from 'src/sessions/index.ts'
+import { useEventListener, useMountHandler } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
 import './ActionExecModal.scss'
-import ActionProperties from './ActionProperties'
-import ExecCheats from './ExecCheats'
-import ExecOption from './ExecOption'
+import ActionProperties from './ActionProperties.tsx'
+import ExecCheats from './ExecCheats.tsx'
+import ExecOption from './ExecOption.tsx'
 
 /**
  * Prompt for a session participant to select an action to execute on a node.
@@ -40,9 +40,14 @@ export default function ActionExecModal({
   // drop down.
   const [selectedAction, selectAction] = useState<ClientMissionAction | null>(
     () => {
+      // Get the first action.
+      let action: ClientMissionAction | undefined = node.actions
+        .values()
+        .next().value
+
       // If there is only one action, select it.
-      if (node.actions.size === 1) {
-        return node.actions.values().next().value
+      if (node.actions.size === 1 && action) {
+        return action
       }
       // Otherwise, select nothing.
       else {
@@ -178,11 +183,13 @@ export default function ActionExecModal({
     // select it.
     else if (node.actions.size === 1) {
       // Get the action.
-      let action: ClientMissionAction = node.actions.values().next().value
+      let action: ClientMissionAction | undefined = node.actions
+        .values()
+        .next().value
 
       // Select the action if not already selected.
-      if (selectedAction?._id !== action._id) {
-        selectAction(node.actions.values().next().value)
+      if (action && selectedAction?._id !== action._id) {
+        selectAction(action)
       }
     }
   }, [node.actions.size])

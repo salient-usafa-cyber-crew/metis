@@ -1,7 +1,7 @@
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
 import React from 'react'
-import { compute } from 'src/toolbox'
-import { TWithKey } from '../../../../../../shared/toolbox/objects'
-import ButtonSvg, { TButtonSvg_P, TButtonSvgSize } from './ButtonSvg'
+import { compute } from 'src/toolbox/index.ts'
+import ButtonSvg, { TButtonSvg_P, TButtonSvgSize } from './ButtonSvg.tsx'
 import './ButtonSvgPanel.scss'
 
 /**

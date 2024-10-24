@@ -1,18 +1,18 @@
+import { DateToolbox } from 'metis/shared/toolbox/dates.ts'
 import { useRef } from 'react'
-import Prompt from 'src/components/content/communication/Prompt'
-import { TButtonSvgType } from 'src/components/content/user-controls/buttons/ButtonSvg'
-import { TSvgPanelOnClick } from 'src/components/content/user-controls/buttons/ButtonSvgPanel_v2'
-import { useGlobalContext } from 'src/context'
-import ClientMission from 'src/missions'
-import { compute } from 'src/toolbox'
-import { useRequireLogin } from 'src/toolbox/hooks'
-import { DateToolbox } from '../../../../../../../shared/toolbox/dates'
-import List, { TGetListButtonTooltip } from '../List'
+import Prompt from 'src/components/content/communication/Prompt.tsx'
+import { TButtonSvgType } from 'src/components/content/user-controls/buttons/ButtonSvg.tsx'
+import { TSvgPanelOnClick } from 'src/components/content/user-controls/buttons/ButtonSvgPanel_v2.tsx'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientMission from 'src/missions/index.ts'
+import { useRequireLogin } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import List, { TGetListButtonTooltip } from '../List.tsx'
 import {
   TGetItemButtonTooltip,
   TOnItemButtonClick,
   TOnItemSelection,
-} from '../pages/ListItem'
+} from '../pages/ListItem.tsx'
 
 /**
  * A component for displaying a list of missions.

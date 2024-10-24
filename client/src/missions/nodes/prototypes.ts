@@ -1,11 +1,14 @@
-import { TPrototypeButton } from 'src/components/content/session/mission-map/objects/MissionPrototype'
-import { TEventListenerTarget } from 'src/toolbox/hooks'
-import ClientMission, { TClientMissionTypes, TMissionNavigable } from '..'
 import MissionPrototype, {
   TCommonMissionPrototypeJson,
   TMissionPrototypeOptions,
-} from '../../../../shared/missions/nodes/prototypes'
-import { Vector2D } from '../../../../shared/toolbox/space'
+} from 'metis/shared/missions/nodes/prototypes.ts'
+import { Vector2D } from 'metis/shared/toolbox/space.ts'
+import { TPrototypeButton } from 'src/components/content/session/mission-map/objects/MissionPrototype.tsx'
+import { TEventListenerTarget } from 'src/toolbox/hooks.tsx'
+import ClientMission, {
+  TClientMissionTypes,
+  TMissionNavigable,
+} from '../index.ts'
 
 /**
  * Class for managing mission prototypes on the client.

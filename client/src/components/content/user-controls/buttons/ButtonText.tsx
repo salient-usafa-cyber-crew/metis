@@ -1,7 +1,7 @@
 import React from 'react'
-import { compute } from 'src/toolbox'
-import { useDefaultProps } from 'src/toolbox/hooks'
-import Tooltip from '../../communication/Tooltip'
+import { useDefaultProps } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../../communication/Tooltip.tsx'
 import './ButtonText.scss'
 
 /* -- COMPONENT -- */

@@ -1,6 +1,6 @@
+import { TExecutionCheats } from 'metis/shared/missions/actions/executions.ts'
 import { useEffect, useState } from 'react'
-import { DetailToggle } from 'src/components/content/form/DetailToggle'
-import { TExecutionCheats } from '../../../../../../../../../../shared/missions/actions/executions'
+import { DetailToggle } from 'src/components/content/form/DetailToggle.tsx'
 import './ExecCheats.scss'
 
 /* -- COMPONENT -- */

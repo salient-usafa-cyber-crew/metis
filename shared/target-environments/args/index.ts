@@ -1,14 +1,14 @@
-import Dependency from '../dependencies'
-import BooleanArg, { TBooleanArg, TBooleanArgJson } from './boolean-arg'
-import DropdownArg, { TDropdownArg, TDropdownArgJson } from './dropdown-arg'
-import ForceArg, { TForceArg, TForceArgJson } from './force-arg'
+import Dependency from '../dependencies.ts'
+import BooleanArg, { TBooleanArg, TBooleanArgJson } from './boolean-arg.ts'
+import DropdownArg, { TDropdownArg, TDropdownArgJson } from './dropdown-arg.ts'
+import ForceArg, { TForceArg, TForceArgJson } from './force-arg.ts'
 import LargeStringArg, {
   TLargeStringArg,
   TLargeStringArgJson,
-} from './large-string-arg'
-import NodeArg, { TNodeArg, TNodeArgJson } from './node-arg'
-import NumberArg, { TNumberArg, TNumberArgJson } from './number-arg'
-import StringArg, { TStringArg, TStringArgJson } from './string-arg'
+} from './large-string-arg.ts'
+import NodeArg, { TNodeArg, TNodeArgJson } from './node-arg.ts'
+import NumberArg, { TNumberArg, TNumberArgJson } from './number-arg.ts'
+import StringArg, { TStringArg, TStringArgJson } from './string-arg.ts'
 
 /**
  * Represents the base argument type for a target.

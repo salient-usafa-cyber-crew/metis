@@ -1,9 +1,9 @@
+import StringToolbox from 'metis/shared/toolbox/strings.ts'
 import { useState } from 'react'
-import Tooltip from 'src/components/content/communication/Tooltip'
-import ClientMissionAction from 'src/missions/actions'
-import { compute } from 'src/toolbox'
-import { useEventListener } from 'src/toolbox/hooks'
-import StringToolbox from '../../../../../../../../../../shared/toolbox/strings'
+import Tooltip from 'src/components/content/communication/Tooltip.tsx'
+import ClientMissionAction from 'src/missions/actions/index.ts'
+import { useEventListener } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
 import './ExecOption.scss'
 
 /* -- COMPONENT -- */

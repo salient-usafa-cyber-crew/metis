@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { useResizeObserver } from 'src/toolbox/hooks'
-import { useListContext } from './List'
-import { TListItem } from './pages/ListItem'
+import { useResizeObserver } from 'src/toolbox/hooks.tsx'
+import { useListContext } from './List.tsx'
+import { TListItem } from './pages/ListItem.tsx'
 
 /**
  * Handles resizing of the list by recalculating

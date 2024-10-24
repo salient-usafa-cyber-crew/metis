@@ -1,9 +1,9 @@
-import ClientMissionAction from '.'
-import { TClientMissionTypes } from '..'
 import TActionExecution, {
   TActionExecutionJson,
-} from '../../../../shared/missions/actions/executions'
-import ClientMissionNode from '../nodes'
+} from 'metis/shared/missions/actions/executions.ts'
+import { TClientMissionTypes } from '../index.ts'
+import ClientMissionNode from '../nodes/index.ts'
+import ClientMissionAction from './index.ts'
 
 /**
  * The execution of an action on the client.

@@ -1,18 +1,18 @@
 import { useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import MetisInfo from 'src/info'
-import { compute } from 'src/toolbox'
-import { useMountHandler } from 'src/toolbox/hooks'
-import { DefaultLayout, TPage_P } from '.'
+import { useGlobalContext } from 'src/context/index.tsx'
+import MetisInfo from 'src/info/index.ts'
+import { useMountHandler } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
 import Markdown, {
   MarkdownTheme as EMarkdownTheme,
-} from '../content/general-layout/Markdown'
+} from '../content/general-layout/Markdown.tsx'
 import {
   HomeLink,
   LogoutLink,
   TNavigation,
-} from '../content/general-layout/Navigation'
+} from '../content/general-layout/Navigation.tsx'
 import './ChangelogPage.scss'
+import { DefaultLayout, TPage_P } from './index.tsx'
 
 export interface IChangelogPage extends TPage_P {}
 

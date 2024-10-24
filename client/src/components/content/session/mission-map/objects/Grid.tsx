@@ -1,6 +1,6 @@
+import ClientMissionNode from 'src/missions/nodes/index.ts'
+import { compute } from 'src/toolbox/index.ts'
 import './Grid.scss'
-import ClientMissionNode from 'src/missions/nodes'
-import { compute } from 'src/toolbox'
 
 /**
  * A mission map scene object that displays a grid outlining the

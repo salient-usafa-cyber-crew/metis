@@ -1,6 +1,6 @@
 import React from 'react'
-import { compute } from 'src/toolbox'
-import ButtonSvg, { TButtonSvgSize, TButtonSvgType } from './ButtonSvg'
+import { compute } from 'src/toolbox/index.ts'
+import ButtonSvg, { TButtonSvgSize, TButtonSvgType } from './ButtonSvg.tsx'
 import './ButtonSvgPanel_v2.scss'
 
 /**

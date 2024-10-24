@@ -1,8 +1,3 @@
-import { io, Socket } from 'socket.io-client'
-import SessionClient from 'src/sessions'
-import { TEventListenerTarget } from 'src/toolbox/hooks'
-import Logging from 'src/toolbox/logging'
-import { v4 as generateHash } from 'uuid'
 import {
   TAnyResponseEvent,
   TClientEvent,
@@ -17,9 +12,14 @@ import {
   TServerEvent,
   TServerEvents,
   TServerMethod,
-} from '../../../shared/connect/data'
-import { ServerEmittedError } from '../../../shared/connect/errors'
-import { SingleTypeObject } from '../../../shared/toolbox/objects'
+} from 'metis/shared/connect/data.ts'
+import { ServerEmittedError } from 'metis/shared/connect/errors.ts'
+import { SingleTypeObject } from 'metis/shared/toolbox/objects.ts'
+import { io, Socket } from 'socket.io-client'
+import SessionClient from 'src/sessions/index.ts'
+import { TEventListenerTarget } from 'src/toolbox/hooks.tsx'
+import Logging from 'src/toolbox/logging.ts'
+import { v4 as generateHash } from 'uuid'
 
 /**
  * METIS web-socket-based, server connection.
@@ -321,9 +321,9 @@ export default class ServerConnection
             case 'current-session':
               resolve(
                 new SessionClient(
-                  event.data.session,
+                  event.data.session!,
                   this,
-                  event.data.memberId,
+                  event.data.memberId!,
                 ),
               )
               break

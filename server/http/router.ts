@@ -1,10 +1,10 @@
 import express, { Router } from 'express'
-import MetisServer from '../index'
+import MetisServer from '../index.ts'
 
 /**
  * A router for a Metis server.
  */
-export default class MetisRouter {
+class MetisRouter {
   /**
    * The Express router.
    */
@@ -49,6 +49,8 @@ export default class MetisRouter {
     this._map = map
   }
 }
+
+export default MetisRouter
 
 export type TMetisRouterMap = (
   router: Router,

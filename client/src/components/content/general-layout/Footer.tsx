@@ -1,8 +1,8 @@
-import { useGlobalContext } from 'src/context'
-import { compute } from 'src/toolbox'
-import { TWithKey } from '../../../../../shared/toolbox/objects'
-import Tooltip from '../communication/Tooltip'
-import { TButtonText_P } from '../user-controls/buttons/ButtonText'
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../communication/Tooltip.tsx'
+import { TButtonText_P } from '../user-controls/buttons/ButtonText.tsx'
 import './Footer.scss'
 
 /* -- components -- */

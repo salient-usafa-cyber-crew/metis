@@ -1,5 +1,7 @@
-import MissionTransformation from '.'
-import ClientMissionPrototype, { TPrototypeRelation } from '../nodes/prototypes'
+import ClientMissionPrototype, {
+  TPrototypeRelation,
+} from '../nodes/prototypes.ts'
+import MissionTransformation from './index.ts'
 
 /**
  * A transformation within a mission where a new prototype

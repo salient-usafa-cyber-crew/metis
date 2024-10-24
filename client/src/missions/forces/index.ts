@@ -1,26 +1,25 @@
-import { TLine_P } from 'src/components/content/session/mission-map/objects/Line'
-import { TEventListenerTarget } from 'src/toolbox/hooks'
+import MissionForce, {
+  TMissionForceJson,
+  TMissionForceOptions,
+} from 'metis/shared/missions/forces/index.ts'
+import { TCommonOutputJson } from 'metis/shared/missions/forces/output.ts'
+import {
+  TMissionNodeJson,
+  TMissionNodeOptions,
+} from 'metis/shared/missions/nodes/index.ts'
+import { Counter } from 'metis/shared/toolbox/numbers.ts'
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
+import { Vector2D } from 'metis/shared/toolbox/space.ts'
+import { TLine_P } from 'src/components/content/session/mission-map/objects/Line.tsx'
+import { TEventListenerTarget } from 'src/toolbox/hooks.tsx'
+import ClientMissionAction from '../actions/index.ts'
 import ClientMission, {
   TClientMissionTypes,
   TMissionComponent,
   TMissionNavigable,
-} from '..'
-import {
-  MissionForce,
-  TMissionForceJson,
-  TMissionForceOptions,
-} from '../../../../shared/missions/forces'
-import { TCommonOutputJson } from '../../../../shared/missions/forces/output'
-import {
-  TMissionNodeJson,
-  TMissionNodeOptions,
-} from '../../../../shared/missions/nodes'
-import { Counter } from '../../../../shared/toolbox/numbers'
-import { TWithKey } from '../../../../shared/toolbox/objects'
-import { Vector2D } from '../../../../shared/toolbox/space'
-import ClientMissionAction from '../actions'
-import ClientMissionNode from '../nodes'
-import ClientOutput from './output'
+} from '../index.ts'
+import ClientMissionNode from '../nodes/index.ts'
+import ClientOutput from './output.ts'
 
 /**
  * Class for managing mission prototypes on the client.

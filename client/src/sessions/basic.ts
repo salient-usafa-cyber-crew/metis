@@ -1,8 +1,8 @@
-import { TListItem } from 'src/components/content/data/lists/pages/ListItem'
 import {
   TSessionBasicJson,
   TSessionConfig,
-} from '../../../shared/sessions/index'
+} from 'metis/shared/sessions/index.ts'
+import { TListItem } from 'src/components/content/data/lists/pages/ListItem.tsx'
 
 /**
  * More basic representation of a session.

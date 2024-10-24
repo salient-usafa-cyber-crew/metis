@@ -1,5 +1,5 @@
-import ClientUser from 'src/users'
-import { TLogin } from '../../../shared/logins'
+import { TLogin } from 'metis/shared/logins/index.ts'
+import ClientUser from 'src/users/index.ts'
 
 /**
  * Options that can be passed to the render function.

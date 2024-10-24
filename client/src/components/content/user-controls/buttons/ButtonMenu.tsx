@@ -1,17 +1,17 @@
 /* -- COMPONENT -- */
 
+import { Vector2D } from 'metis/shared/toolbox/space.ts'
+import StringToolbox from 'metis/shared/toolbox/strings.ts'
 import { useRef, useState } from 'react'
-import { compute } from 'src/toolbox'
 import {
   useEventListener,
   useMountHandler,
   useResizeObserver,
   useUnmountHandler,
-} from 'src/toolbox/hooks'
-import { Vector2D } from '../../../../../../shared/toolbox/space'
-import StringToolbox from '../../../../../../shared/toolbox/strings'
+} from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
 import './ButtonMenu.scss'
-import ButtonSvg, { TButtonSvgType } from './ButtonSvg'
+import ButtonSvg, { TButtonSvgType } from './ButtonSvg.tsx'
 
 /* -- COMPONENT -- */
 

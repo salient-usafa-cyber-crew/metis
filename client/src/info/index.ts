@@ -1,5 +1,5 @@
 import axios, { AxiosError } from 'axios'
-import { TMetisInfo } from '../../../shared/info/'
+import { TMetisInfo } from 'metis/shared/info/index.ts'
 
 /**
  * This class is used to get information about the application.

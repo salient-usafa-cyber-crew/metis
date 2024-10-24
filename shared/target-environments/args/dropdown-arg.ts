@@ -1,5 +1,5 @@
-import Arg, { TBaseArg, TBaseArgJson } from '.'
-import Dependency from '../dependencies'
+import Dependency from '../dependencies.ts'
+import Arg, { TBaseArg, TBaseArgJson } from './index.ts'
 
 /**
  * The dropdown argument type for a target.

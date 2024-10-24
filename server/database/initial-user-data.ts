@@ -1,4 +1,4 @@
-import { TCommonUserJson } from 'metis/users'
+import { TCommonUserJson } from 'metis/users/index.ts'
 
 // Default student user data.
 export const studentUserData: Omit<TCommonUserJson, '_id'> = {

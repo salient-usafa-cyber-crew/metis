@@ -1,8 +1,8 @@
+import { TLargeStringArg } from 'metis/shared/target-environments/args/large-string-arg.ts'
 import { useEffect, useState } from 'react'
-import { ClientEffect } from 'src/missions/effects'
-import { usePostInitEffect } from 'src/toolbox/hooks'
-import { TLargeStringArg } from '../../../../../../shared/target-environments/args/large-string-arg'
-import { DetailLargeString } from '../../form/DetailLargeString'
+import ClientEffect from 'src/missions/effects/index.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { DetailLargeString } from '../../form/DetailLargeString.tsx'
 
 /**
  * Renders a large string input box for the argument whose type is `"large-string"`.

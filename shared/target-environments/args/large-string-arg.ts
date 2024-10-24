@@ -1,4 +1,4 @@
-import Arg, { TBaseArg, TBaseArgJson } from '.'
+import Arg, { TBaseArg, TBaseArgJson } from './index.ts'
 
 /**
  * The large character string argument type for a target.

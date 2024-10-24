@@ -1,5 +1,5 @@
+import { Vector2D } from 'metis/shared/toolbox/space.ts'
 import { useMemo } from 'react'
-import { Vector2D } from '../../../../../../../shared/toolbox/space'
 import './Line.scss'
 
 /**

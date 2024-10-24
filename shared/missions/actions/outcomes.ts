@@ -1,6 +1,14 @@
-import { TAction, TCommonMissionAction, TCommonMissionActionJson } from '.'
-import { TCommonMissionTypes } from '..'
-import { TCommonMissionNode, TCommonMissionNodeJson, TNode } from '../nodes'
+import { TCommonMissionTypes } from '../index.ts'
+import {
+  TCommonMissionNode,
+  TCommonMissionNodeJson,
+  TNode,
+} from '../nodes/index.ts'
+import {
+  TAction,
+  TCommonMissionAction,
+  TCommonMissionActionJson,
+} from './index.ts'
 
 /**
  * Extracts the outcome type from the mission types.

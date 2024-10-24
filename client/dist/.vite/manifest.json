@@ -1,0 +1,281 @@
+{
+  "index.html": {
+    "file": "assets/index-Ckl3KXXR.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/assets/images/icons/add.svg",
+      "src/assets/images/icons/ban.svg",
+      "src/assets/images/icons/blocked.svg",
+      "src/assets/images/icons/cancel.svg",
+      "src/assets/images/icons/copy.svg",
+      "src/assets/images/icons/device.svg",
+      "src/assets/images/icons/dog_ear.svg",
+      "src/assets/images/icons/down.svg",
+      "src/assets/images/icons/download.svg",
+      "src/assets/images/icons/edit.svg",
+      "src/assets/images/icons/file.svg",
+      "src/assets/images/icons/folder.svg",
+      "src/assets/images/icons/hidden.svg",
+      "src/assets/images/icons/kick.svg",
+      "src/assets/images/icons/launch.svg",
+      "src/assets/images/icons/lightning.svg",
+      "src/assets/images/icons/locate-node.svg",
+      "src/assets/images/icons/lock.svg",
+      "src/assets/images/icons/open.svg",
+      "src/assets/images/icons/options.svg",
+      "src/assets/images/icons/pending.svg",
+      "src/assets/images/icons/question.svg",
+      "src/assets/images/icons/remove.svg",
+      "src/assets/images/icons/reorder.svg",
+      "src/assets/images/icons/save.svg",
+      "src/assets/images/icons/search.svg",
+      "src/assets/images/icons/shell.svg",
+      "src/assets/images/icons/shown.svg",
+      "src/assets/images/icons/text-cursor.svg",
+      "src/assets/images/icons/upload.svg",
+      "src/assets/images/icons/user.svg",
+      "src/assets/images/icons/warning-filled.svg",
+      "src/assets/images/icons/warning-transparent.svg",
+      "src/assets/images/icons/zoom-in.svg",
+      "src/assets/images/icons/zoom-out.svg"
+    ],
+    "css": [
+      "assets/index-BRF2951F.css"
+    ],
+    "assets": [
+      "assets/landing-page-img-BQQMtHQ9.png",
+      "assets/new_metis_emblem-CuuDm_Yq.png",
+      "assets/new_metis_logo-DL0tWYox.png"
+    ]
+  },
+  "src/assets/images/icons/add.svg": {
+    "file": "assets/add-DSYvXDnq.js",
+    "name": "add",
+    "src": "src/assets/images/icons/add.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/ban.svg": {
+    "file": "assets/ban-BBBL6GaV.js",
+    "name": "ban",
+    "src": "src/assets/images/icons/ban.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/blocked.svg": {
+    "file": "assets/blocked-DaU2prZC.js",
+    "name": "blocked",
+    "src": "src/assets/images/icons/blocked.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/cancel.svg": {
+    "file": "assets/cancel-DoqtwpRu.js",
+    "name": "cancel",
+    "src": "src/assets/images/icons/cancel.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/copy.svg": {
+    "file": "assets/copy-D-jl-D4c.js",
+    "name": "copy",
+    "src": "src/assets/images/icons/copy.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/device.svg": {
+    "file": "assets/device-C3XgiR5j.js",
+    "name": "device",
+    "src": "src/assets/images/icons/device.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/dog_ear.svg": {
+    "file": "assets/dog_ear-99vneY88.js",
+    "name": "dog_ear",
+    "src": "src/assets/images/icons/dog_ear.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/down.svg": {
+    "file": "assets/down-B7_Kt4R3.js",
+    "name": "down",
+    "src": "src/assets/images/icons/down.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/download.svg": {
+    "file": "assets/download-DbNjR1vw.js",
+    "name": "download",
+    "src": "src/assets/images/icons/download.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/edit.svg": {
+    "file": "assets/edit-Oer_0gh_.js",
+    "name": "edit",
+    "src": "src/assets/images/icons/edit.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/file.svg": {
+    "file": "assets/file-BzYDm39N.js",
+    "name": "file",
+    "src": "src/assets/images/icons/file.svg",
+    "isDynamicEntry": true,
+    "assets": [
+      "assets/file-D3AoSyey.svg"
+    ]
+  },
+  "src/assets/images/icons/folder.svg": {
+    "file": "assets/folder-CKtbhnii.js",
+    "name": "folder",
+    "src": "src/assets/images/icons/folder.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/hidden.svg": {
+    "file": "assets/hidden-Dw5yxF7r.js",
+    "name": "hidden",
+    "src": "src/assets/images/icons/hidden.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/kick.svg": {
+    "file": "assets/kick-CDATo2kZ.js",
+    "name": "kick",
+    "src": "src/assets/images/icons/kick.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/launch.svg": {
+    "file": "assets/launch-CQGUPolL.js",
+    "name": "launch",
+    "src": "src/assets/images/icons/launch.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/lightning.svg": {
+    "file": "assets/lightning-C-n9t3fR.js",
+    "name": "lightning",
+    "src": "src/assets/images/icons/lightning.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/locate-node.svg": {
+    "file": "assets/locate-node-DtzvJA5q.js",
+    "name": "locate-node",
+    "src": "src/assets/images/icons/locate-node.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/lock.svg": {
+    "file": "assets/lock-B-4j07zW.js",
+    "name": "lock",
+    "src": "src/assets/images/icons/lock.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/open.svg": {
+    "file": "assets/open-1qe9m_1g.js",
+    "name": "open",
+    "src": "src/assets/images/icons/open.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/options.svg": {
+    "file": "assets/options-BfMczz_1.js",
+    "name": "options",
+    "src": "src/assets/images/icons/options.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/pending.svg": {
+    "file": "assets/pending-DGZLAGCQ.js",
+    "name": "pending",
+    "src": "src/assets/images/icons/pending.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/question.svg": {
+    "file": "assets/question-BhhuKmbr.js",
+    "name": "question",
+    "src": "src/assets/images/icons/question.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/remove.svg": {
+    "file": "assets/remove-CQ6OuVEv.js",
+    "name": "remove",
+    "src": "src/assets/images/icons/remove.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/reorder.svg": {
+    "file": "assets/reorder-Dsyz6Ve8.js",
+    "name": "reorder",
+    "src": "src/assets/images/icons/reorder.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/save.svg": {
+    "file": "assets/save-BijzZOA9.js",
+    "name": "save",
+    "src": "src/assets/images/icons/save.svg",
+    "isDynamicEntry": true,
+    "assets": [
+      "assets/save-CzNouG6N.svg"
+    ]
+  },
+  "src/assets/images/icons/search.svg": {
+    "file": "assets/search-CTtVMP3c.js",
+    "name": "search",
+    "src": "src/assets/images/icons/search.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/shell.svg": {
+    "file": "assets/shell-CgNwdHZO.js",
+    "name": "shell",
+    "src": "src/assets/images/icons/shell.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/shown.svg": {
+    "file": "assets/shown-DadK15Z_.js",
+    "name": "shown",
+    "src": "src/assets/images/icons/shown.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/text-cursor.svg": {
+    "file": "assets/text-cursor-D0HcGd5Y.js",
+    "name": "text-cursor",
+    "src": "src/assets/images/icons/text-cursor.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/upload.svg": {
+    "file": "assets/upload-Dk_3UlXI.js",
+    "name": "upload",
+    "src": "src/assets/images/icons/upload.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/user.svg": {
+    "file": "assets/user-BcKLcZlq.js",
+    "name": "user",
+    "src": "src/assets/images/icons/user.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/warning-filled.svg": {
+    "file": "assets/warning-filled-Yz-wx2w2.js",
+    "name": "warning-filled",
+    "src": "src/assets/images/icons/warning-filled.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/warning-transparent.svg": {
+    "file": "assets/warning-transparent-_aruL-oj.js",
+    "name": "warning-transparent",
+    "src": "src/assets/images/icons/warning-transparent.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/zoom-in.svg": {
+    "file": "assets/zoom-in-KA1CIcwR.js",
+    "name": "zoom-in",
+    "src": "src/assets/images/icons/zoom-in.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/icons/zoom-out.svg": {
+    "file": "assets/zoom-out-TzDDOKX-.js",
+    "name": "zoom-out",
+    "src": "src/assets/images/icons/zoom-out.svg",
+    "isDynamicEntry": true
+  },
+  "src/assets/images/landing-page-img.png": {
+    "file": "assets/landing-page-img-BQQMtHQ9.png",
+    "src": "src/assets/images/landing-page-img.png"
+  },
+  "src/assets/images/new_metis_emblem.png": {
+    "file": "assets/new_metis_emblem-CuuDm_Yq.png",
+    "src": "src/assets/images/new_metis_emblem.png"
+  },
+  "src/assets/images/new_metis_logo.png": {
+    "file": "assets/new_metis_logo-DL0tWYox.png",
+    "src": "src/assets/images/new_metis_logo.png"
+  }
+}

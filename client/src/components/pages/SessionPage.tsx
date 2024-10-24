@@ -1,32 +1,35 @@
+import MapToolbox from 'metis/shared/toolbox/maps.ts'
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
 import { useEffect, useRef, useState } from 'react'
-import { useGlobalContext, useNavigationMiddleware } from 'src/context'
-import ClientMission from 'src/missions'
-import ClientMissionForce from 'src/missions/forces'
-import ClientMissionNode from 'src/missions/nodes'
-import SessionClient from 'src/sessions'
-import { compute } from 'src/toolbox'
+import {
+  useGlobalContext,
+  useNavigationMiddleware,
+} from 'src/context/index.tsx'
+import ClientMissionForce from 'src/missions/forces/index.ts'
+import ClientMission from 'src/missions/index.ts'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
+import SessionClient from 'src/sessions/index.ts'
 import {
   useEventListener,
   useMountHandler,
   useRequireLogin,
-} from 'src/toolbox/hooks'
-import { DefaultLayout, TPage_P } from '.'
-import MapToolbox from '../../../../shared/toolbox/maps'
-import { TWithKey } from '../../../../shared/toolbox/objects'
-import Prompt from '../content/communication/Prompt'
-import { HomeLink } from '../content/general-layout/Navigation'
+} from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Prompt from '../content/communication/Prompt.tsx'
+import { HomeLink } from '../content/general-layout/Navigation.tsx'
 import {
   EPanelSizingMode,
   PanelSizeRelationship,
   ResizablePanel,
-} from '../content/general-layout/ResizablePanels'
-import SessionMembersPanel from '../content/session/members/SessionMembersPanel'
-import MissionMap from '../content/session/mission-map'
-import ActionExecModal from '../content/session/mission-map/ui/overlay/modals/action-execution/ActionExecModal'
-import OutputPanel from '../content/session/output-panel'
-import StatusBar from '../content/session/StatusBar'
-import { TValidPanelButton } from '../content/user-controls/buttons/ButtonSvgPanel'
-import { TButtonText_P } from '../content/user-controls/buttons/ButtonText'
+} from '../content/general-layout/ResizablePanels.tsx'
+import SessionMembersPanel from '../content/session/members/SessionMembersPanel.tsx'
+import MissionMap from '../content/session/mission-map/index.tsx'
+import ActionExecModal from '../content/session/mission-map/ui/overlay/modals/action-execution/ActionExecModal.tsx'
+import OutputPanel from '../content/session/output-panel/index.tsx'
+import StatusBar from '../content/session/StatusBar.tsx'
+import { TValidPanelButton } from '../content/user-controls/buttons/ButtonSvgPanel.tsx'
+import { TButtonText_P } from '../content/user-controls/buttons/ButtonText.tsx'
+import { DefaultLayout, TPage_P } from './index.tsx'
 import './SessionPage.scss'
 
 /**

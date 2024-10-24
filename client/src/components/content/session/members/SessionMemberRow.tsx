@@ -1,18 +1,18 @@
-import { ReactNode, useEffect, useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import ClientMissionForce from 'src/missions/forces'
-import SessionClient from 'src/sessions'
-import ClientSessionMember from 'src/sessions/members'
-import { compute } from 'src/toolbox'
-import { usePostInitEffect } from 'src/toolbox/hooks'
 import MemberRole, {
   TMemberRoleId,
-} from '../../../../../../shared/sessions/members/roles'
-import Prompt from '../../communication/Prompt'
-import { DetailDropdown } from '../../form/DetailDropdown'
+} from 'metis/shared/sessions/members/roles.ts'
+import { ReactNode, useEffect, useState } from 'react'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientMissionForce from 'src/missions/forces/index.ts'
+import SessionClient from 'src/sessions/index.ts'
+import ClientSessionMember from 'src/sessions/members.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Prompt from '../../communication/Prompt.tsx'
+import { DetailDropdown } from '../../form/DetailDropdown.tsx'
 import ButtonSvgPanel, {
   TValidPanelButton,
-} from '../../user-controls/buttons/ButtonSvgPanel'
+} from '../../user-controls/buttons/ButtonSvgPanel.tsx'
 import './SessionMemberRow.scss'
 
 export default function SessionMemberRow({

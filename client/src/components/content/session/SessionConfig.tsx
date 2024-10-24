@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
 import {
   TSessionAccessibility,
   TSessionConfig,
-} from '../../../../../shared/sessions'
-import { DetailDropdown } from '../form/DetailDropdown'
-import { DetailToggle } from '../form/DetailToggle'
-import { ButtonText } from '../user-controls/buttons/ButtonText'
+} from 'metis/shared/sessions/index.ts'
+import { useEffect, useState } from 'react'
+import { DetailDropdown } from '../form/DetailDropdown.tsx'
+import { DetailToggle } from '../form/DetailToggle.tsx'
+import { ButtonText } from '../user-controls/buttons/ButtonText.tsx'
 import './SessionConfig.scss'
 
 /**

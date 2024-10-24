@@ -1,4 +1,4 @@
-import UserPermission from './permissions'
+import UserPermission from './permissions.ts'
 
 /**
  * Represents the access of a user using METIS.

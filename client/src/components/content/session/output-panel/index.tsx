@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import ClientMissionForce from 'src/missions/forces'
-import ClientMissionNode from 'src/missions/nodes'
-import { useEventListener } from 'src/toolbox/hooks'
-import ExecutionStarted from './ExecutionStarted'
+import ClientMissionForce from 'src/missions/forces/index.ts'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
+import { useEventListener } from 'src/toolbox/hooks.tsx'
+import ExecutionStarted from './ExecutionStarted.tsx'
 import './index.scss'
-import Output from './Output'
+import Output from './Output.tsx'
 
 /**
  * A panel for displaying messages in the session.

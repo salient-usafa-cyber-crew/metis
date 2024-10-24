@@ -1,6 +1,6 @@
-import { TClientMissionTypes } from 'src/missions'
-import { ClientTargetEnvironment } from '.'
-import Target from '../../../shared/target-environments/targets'
+import Target from 'metis/shared/target-environments/targets.ts'
+import { TClientMissionTypes } from 'src/missions/index.ts'
+import ClientTargetEnvironment from './index.ts'
 
 /**
  * Class representing a target within a target environment

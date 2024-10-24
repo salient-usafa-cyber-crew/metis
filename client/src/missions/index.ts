@@ -1,42 +1,45 @@
 import axios, { AxiosResponse } from 'axios'
-import { TListItem } from 'src/components/content/data/lists/pages/ListItem'
-import { TLine_P } from 'src/components/content/session/mission-map/objects/Line'
-import { TPrototypeSlot_P } from 'src/components/content/session/mission-map/objects/PrototypeSlot'
-import SessionClient from 'src/sessions'
-import ClientSessionMember from 'src/sessions/members'
-import { ClientTargetEnvironment } from 'src/target-environments'
-import ClientTarget from 'src/target-environments/targets'
-import { TEventListenerTarget } from 'src/toolbox/hooks'
-import ClientUser from 'src/users'
-import { v4 as generateHash } from 'uuid'
+import MissionForce, {
+  TCommonMissionForceJson,
+  TMissionForceOptions,
+} from 'metis/shared/missions/forces/index.ts'
 import Mission, {
   TCommonMissionJson,
   TCommonMissionTypes,
   TMissionOptions,
-} from '../../../shared/missions'
-import {
-  MissionForce,
-  TCommonMissionForceJson,
-  TMissionForceOptions,
-} from '../../../shared/missions/forces'
+} from 'metis/shared/missions/index.ts'
 import {
   TCommonMissionPrototypeJson,
   TMissionPrototypeOptions,
-} from '../../../shared/missions/nodes/prototypes'
-import { Counter } from '../../../shared/toolbox/numbers'
-import { AnyObject, TWithKey } from '../../../shared/toolbox/objects'
-import { Vector2D } from '../../../shared/toolbox/space'
-import ClientMissionAction from './actions'
-import ClientActionExecution from './actions/executions'
-import ClientActionOutcome from './actions/outcomes'
-import { ClientEffect } from './effects'
-import ClientMissionForce, { TClientMissionForceOptions } from './forces'
-import ClientOutput from './forces/output'
-import ClientMissionNode from './nodes'
-import ClientMissionPrototype, { TPrototypeRelation } from './nodes/prototypes'
-import MissionTransformation from './transformations'
-import PrototypeCreation from './transformations/creations'
-import PrototypeTranslation from './transformations/translations'
+} from 'metis/shared/missions/nodes/prototypes.ts'
+import { Counter } from 'metis/shared/toolbox/numbers.ts'
+import { AnyObject, TWithKey } from 'metis/shared/toolbox/objects.ts'
+import { Vector2D } from 'metis/shared/toolbox/space.ts'
+import { TListItem } from 'src/components/content/data/lists/pages/ListItem.tsx'
+import { TLine_P } from 'src/components/content/session/mission-map/objects/Line.tsx'
+import { TPrototypeSlot_P } from 'src/components/content/session/mission-map/objects/PrototypeSlot.tsx'
+import SessionClient from 'src/sessions/index.ts'
+import ClientSessionMember from 'src/sessions/members.ts'
+import ClientTargetEnvironment from 'src/target-environments/index.ts'
+import ClientTarget from 'src/target-environments/targets.ts'
+import { TEventListenerTarget } from 'src/toolbox/hooks.tsx'
+import ClientUser from 'src/users/index.ts'
+import { v4 as generateHash } from 'uuid'
+import ClientActionExecution from './actions/executions.ts'
+import ClientMissionAction from './actions/index.ts'
+import ClientActionOutcome from './actions/outcomes.ts'
+import ClientEffect from './effects/index.ts'
+import ClientMissionForce, {
+  TClientMissionForceOptions,
+} from './forces/index.ts'
+import ClientOutput from './forces/output.ts'
+import ClientMissionNode from './nodes/index.ts'
+import ClientMissionPrototype, {
+  TPrototypeRelation,
+} from './nodes/prototypes.ts'
+import PrototypeCreation from './transformations/creations.ts'
+import MissionTransformation from './transformations/index.ts'
+import PrototypeTranslation from './transformations/translations.ts'
 
 /**
  * Class for managing missions on the client.

@@ -1,9 +1,9 @@
-import { TButtonSvg_P } from 'src/components/content/user-controls/buttons/ButtonSvg'
-import ClientMission from 'src/missions'
-import { TWithKey } from '../../../../../../../shared/toolbox/objects'
+import { TWithKey } from 'metis/shared/toolbox/objects.ts'
+import { TButtonSvg_P } from 'src/components/content/user-controls/buttons/ButtonSvg.tsx'
+import ClientMission from 'src/missions/index.ts'
 import './Hud.scss'
-import TitleBar from './TitleBar'
-import TabBar, { TTabBarTab } from './tabs/TabBar'
+import TitleBar from './TitleBar.tsx'
+import TabBar, { TTabBarTab } from './tabs/TabBar.tsx'
 
 /**
  * The master tab for the tab bar.

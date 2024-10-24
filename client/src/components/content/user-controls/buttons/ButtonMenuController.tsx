@@ -1,8 +1,8 @@
+import { Vector2D } from 'metis/shared/toolbox/space.ts'
 import { RefObject } from 'react'
-import { useGlobalContext } from 'src/context'
-import { useEventListener } from 'src/toolbox/hooks'
-import { Vector2D } from '../../../../../../shared/toolbox/space'
-import { TButtonMenu_P } from './ButtonMenu'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { useEventListener } from 'src/toolbox/hooks.tsx'
+import { TButtonMenu_P } from './ButtonMenu.tsx'
 
 /**
  * Activates a button menu when the target element

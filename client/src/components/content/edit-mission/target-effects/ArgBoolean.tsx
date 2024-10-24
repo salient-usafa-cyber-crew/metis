@@ -1,8 +1,8 @@
+import { TBooleanArg } from 'metis/shared/target-environments/args/boolean-arg.ts'
 import { useEffect, useState } from 'react'
-import { ClientEffect } from 'src/missions/effects'
-import { usePostInitEffect } from 'src/toolbox/hooks'
-import { TBooleanArg } from '../../../../../../shared/target-environments/args/boolean-arg'
-import { DetailToggle } from '../../form/DetailToggle'
+import ClientEffect from 'src/missions/effects/index.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { DetailToggle } from '../../form/DetailToggle.tsx'
 
 /**
  * Renders a toggle switch for the argument whose type is `"boolean"`.

@@ -1,8 +1,8 @@
-import { TCommonTargetEnv, TTargetEnv } from '.'
-import { TTargetEnvContext } from '../../server/target-environments/context-provider'
-import { TCommonMissionTypes } from '../../shared/missions'
-import Arg, { TTargetArg, TTargetArgJson } from './args'
-import Dependency from './dependencies'
+import { TTargetEnvContext } from '../../server/target-environments/context-provider.ts'
+import { TCommonMissionTypes } from '../../shared/missions/index.ts'
+import Arg, { TTargetArg, TTargetArgJson } from './args/index.ts'
+import Dependency from './dependencies.ts'
+import { TCommonTargetEnv, TTargetEnv } from './index.ts'
 
 /**
  * This is an entity that can be found in a target environment.

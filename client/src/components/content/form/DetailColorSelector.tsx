@@ -1,9 +1,12 @@
 import { useState } from 'react'
-import { compute } from 'src/toolbox'
-import { TDetail_P } from '.'
-import Tooltip from '../communication/Tooltip'
-import { ButtonText, TButtonText_P } from '../user-controls/buttons/ButtonText'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../communication/Tooltip.tsx'
+import {
+  ButtonText,
+  TButtonText_P,
+} from '../user-controls/buttons/ButtonText.tsx'
 import './DetailColorSelector.scss'
+import { TDetail_P } from './index.ts'
 
 /**
  * This will render a detail for

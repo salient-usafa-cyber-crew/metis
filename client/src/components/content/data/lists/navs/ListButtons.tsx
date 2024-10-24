@@ -1,12 +1,8 @@
-import ButtonSvgPanel_v2 from '../../../user-controls/buttons/ButtonSvgPanel_v2'
-import { TList_P, useListContext } from '../List'
+import ButtonSvg from 'src/components/content/user-controls/buttons/ButtonSvg.tsx'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { useListContext } from '../List.tsx'
+import { TListItem } from '../pages/ListItem.tsx'
 import './ListButtons.scss'
-import { TListItem } from '../pages/ListItem'
-import ButtonSvg, {
-  TButtonSvgType,
-} from 'src/components/content/user-controls/buttons/ButtonSvg'
-import ButtonMenuController from 'src/components/content/user-controls/buttons/ButtonMenuController'
-import { useGlobalContext } from 'src/context'
 
 /**
  * Provides buttons to the `List` component

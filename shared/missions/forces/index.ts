@@ -1,17 +1,21 @@
-import { AnyObject } from 'metis/toolbox/objects'
-import { TCommonUser } from 'metis/users'
-import Mission, { TCommonMission, TCommonMissionTypes, TMission } from '..'
-import context from '../../context'
-import StringToolbox from '../../toolbox/strings'
+import { AnyObject } from 'metis/toolbox/objects.ts'
+import { TCommonUser } from 'metis/users/index.ts'
+import context from '../../context/index.ts'
+import StringToolbox from '../../toolbox/strings.ts'
+import Mission, {
+  TCommonMission,
+  TCommonMissionTypes,
+  TMission,
+} from '../index.ts'
 import {
   TCommonMissionNode,
   TCommonMissionNodeJson,
   TMissionNodeJson,
   TMissionNodeOptions,
   TNode,
-} from '../nodes'
-import { TCommonMissionPrototype } from '../nodes/prototypes'
-import { TCommonOutput, TCommonOutputJson, TOutput } from './output'
+} from '../nodes/index.ts'
+import { TCommonMissionPrototype } from '../nodes/prototypes.ts'
+import { TCommonOutput, TCommonOutputJson, TOutput } from './output.ts'
 
 /* -- CLASSES -- */
 
@@ -19,7 +23,7 @@ import { TCommonOutput, TCommonOutputJson, TOutput } from './output'
  * Represents a force in a mission, which is a collection of nodes
  * that are interacted with by a group of participants in a session.
  */
-export abstract class MissionForce<
+export default abstract class MissionForce<
   T extends TCommonMissionTypes = TCommonMissionTypes,
 > implements TCommonMissionForce
 {

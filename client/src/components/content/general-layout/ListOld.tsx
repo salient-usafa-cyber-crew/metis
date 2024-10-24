@@ -1,9 +1,9 @@
 /* -- imports -- */
 
 import lodash from 'lodash'
+import { TAjaxStatus } from 'metis/shared/toolbox/ajax.ts'
 import React from 'react'
-import { TAjaxStatus } from '../../../../../shared/toolbox/ajax'
-import Tooltip from '../communication/Tooltip'
+import Tooltip from '../communication/Tooltip.tsx'
 import './ListOld.scss'
 
 /* -- enumerations -- */

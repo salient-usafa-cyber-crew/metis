@@ -1,7 +1,7 @@
-import { TCommonTargetEnvJson } from 'metis/target-environments'
-import Target, { TCommonTargetJson } from 'metis/target-environments/targets'
-import ServerTargetEnvironment from '.'
-import { TServerMissionTypes } from '../missions'
+import { TCommonTargetEnvJson } from 'metis/target-environments/index.ts'
+import Target, { TCommonTargetJson } from 'metis/target-environments/targets.ts'
+import { TServerMissionTypes } from '../missions/index.ts'
+import ServerTargetEnvironment from './index.ts'
 
 /**
  * A class for managing targets on the server.

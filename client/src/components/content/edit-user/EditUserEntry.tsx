@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import { usePostInitEffect } from 'src/toolbox/hooks'
-import ClientUser from 'src/users'
-import { DetailLocked } from '../form/DetailLocked'
-import { DetailString } from '../form/DetailString'
-import { DetailToggle } from '../form/DetailToggle'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import ClientUser from 'src/users/index.ts'
+import { DetailLocked } from '../form/DetailLocked.tsx'
+import { DetailString } from '../form/DetailString.tsx'
+import { DetailToggle } from '../form/DetailToggle.tsx'
 import './EditUserEntry.scss'
 
 /**

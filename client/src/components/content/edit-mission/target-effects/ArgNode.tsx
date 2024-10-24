@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react'
-import { ClientEffect } from 'src/missions/effects'
-import ClientMissionForce from 'src/missions/forces'
-import ClientMissionNode from 'src/missions/nodes'
-import { compute } from 'src/toolbox'
-import { usePostInitEffect } from 'src/toolbox/hooks'
-import ForceArg from '../../../../../../shared/target-environments/args/force-arg'
+import ForceArg from 'metis/shared/target-environments/args/force-arg.ts'
 import NodeArg, {
   TNodeArg,
-} from '../../../../../../shared/target-environments/args/node-arg'
+} from 'metis/shared/target-environments/args/node-arg.ts'
+import { useEffect, useState } from 'react'
+import ClientEffect from 'src/missions/effects/index.ts'
+import ClientMissionForce from 'src/missions/forces/index.ts'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
 import {
   DetailDropdown,
   TRequiredHandleInvalidOption,
-} from '../../form/DetailDropdown'
+} from '../../form/DetailDropdown.tsx'
 
 /**
  * Renders two dropdowns for the argument whose type is `"node"`.

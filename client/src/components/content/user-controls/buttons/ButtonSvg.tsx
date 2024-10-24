@@ -1,6 +1,6 @@
-import React from 'react'
-import { compute } from 'src/toolbox'
-import Tooltip from '../../communication/Tooltip'
+import React, { useEffect, useState } from 'react'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../../communication/Tooltip.tsx'
 import './ButtonSvg.scss'
 
 /* -- components -- */
@@ -18,7 +18,21 @@ export default function ButtonSvg({
   onClick,
   onCopy = () => {},
 }: TButtonSvg_P): JSX.Element | null {
-  /* -- computed -- */
+  /* -- STATE -- */
+  const [backgroundImage, setBackgroundImage] = useState<string | null>(null)
+
+  /* -- EFFECTS -- */
+  useEffect(() => {
+    async function loadSvg() {
+      if (type !== '_blank') {
+        const svg = await import(`../../../../assets/images/icons/${type}.svg`)
+        setBackgroundImage(svg.default)
+      }
+    }
+    loadSvg()
+  }, [type])
+
+  /* -- COMPUTED -- */
 
   /**
    * The class for the root element.
@@ -52,7 +66,7 @@ export default function ButtonSvg({
     switch (size) {
       case 'regular':
         result = {
-          backgroundImage: `url(${require(`../../../../assets/images/icons/${type}.svg`)}), linear-gradient(to bottom, #1a2a1a 0% 100%)`,
+          backgroundImage: `url(${backgroundImage}), linear-gradient(to bottom, #1a2a1a 0% 100%)`,
           backgroundSize: '0.5em, cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
@@ -60,7 +74,7 @@ export default function ButtonSvg({
         break
       case 'small':
         result = {
-          backgroundImage: `url(${require(`../../../../assets/images/icons/${type}.svg`)})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: '0.65em',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
@@ -68,7 +82,7 @@ export default function ButtonSvg({
         break
       case 'wide':
         result = {
-          backgroundImage: `url(${require(`../../../../assets/images/icons/${type}.svg`)})`,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: '0.65em',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: '0% center',

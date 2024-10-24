@@ -1,13 +1,16 @@
 import { AxiosError } from 'axios'
 import { useState } from 'react'
-import { useGlobalContext, useNavigationMiddleware } from 'src/context'
-import { compute } from 'src/toolbox'
-import { useMountHandler, useRequireLogin } from 'src/toolbox/hooks'
-import ClientUser from 'src/users'
-import { DefaultLayout, TPage_P } from '.'
-import CreateUserEntry from '../content/edit-user/CreateUserEntry'
-import EditUserEntry from '../content/edit-user/EditUserEntry'
-import { HomeLink, TNavigation } from '../content/general-layout/Navigation'
+import {
+  useGlobalContext,
+  useNavigationMiddleware,
+} from 'src/context/index.tsx'
+import { useMountHandler, useRequireLogin } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import ClientUser from 'src/users/index.ts'
+import CreateUserEntry from '../content/edit-user/CreateUserEntry.tsx'
+import EditUserEntry from '../content/edit-user/EditUserEntry.tsx'
+import { HomeLink, TNavigation } from '../content/general-layout/Navigation.tsx'
+import { DefaultLayout, TPage_P } from './index.tsx'
 import './UserPage.scss'
 
 /**

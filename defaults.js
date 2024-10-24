@@ -9,7 +9,7 @@ const HTTP_RATE_LIMIT = 25
 const WS_RATE_LIMIT = 25
 const FILE_STORE_DIR = './files/store'
 
-module.exports = {
+export default {
   PORT,
   MONGO_DB,
   MONGO_HOST,

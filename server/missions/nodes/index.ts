@@ -1,17 +1,19 @@
-import { TCommonMissionActionJson } from 'metis/missions/actions'
-import { TActionExecutionJson } from 'metis/missions/actions/executions'
-import { TActionOutcomeJson } from 'metis/missions/actions/outcomes'
-import MissionNode from 'metis/missions/nodes'
-import { TTargetEnvContextNode } from 'metis/server/target-environments/context-provider'
-import { TServerMissionTypes } from '..'
-import ServerMissionAction, { TServerMissionActionOptions } from '../actions'
-import ServerActionExecution from '../actions/executions'
-import { ServerRealizedOutcome } from '../actions/outcomes'
+import { TActionExecutionJson } from 'metis/missions/actions/executions.ts'
+import { TCommonMissionActionJson } from 'metis/missions/actions/index.ts'
+import { TActionOutcomeJson } from 'metis/missions/actions/outcomes.ts'
+import MissionNode from 'metis/missions/nodes/index.ts'
+import { TTargetEnvContextNode } from 'metis/server/target-environments/context-provider.ts'
+import ServerActionExecution from '../actions/executions.ts'
+import ServerMissionAction, {
+  TServerMissionActionOptions,
+} from '../actions/index.ts'
+import { ServerRealizedOutcome } from '../actions/outcomes.ts'
+import { TServerMissionTypes } from '../index.ts'
 
 /**
  * Class for managing mission nodes on a session server.
  */
-export default class ServerMissionNode extends MissionNode<TServerMissionTypes> {
+export class ServerMissionNode extends MissionNode<TServerMissionTypes> {
   // Implemented
   protected importActions(
     data: TCommonMissionActionJson[],

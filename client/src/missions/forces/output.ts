@@ -1,10 +1,10 @@
-import { TClientMissionTypes } from 'src/missions'
-import ClientActionExecution from 'src/missions/actions/executions'
-import ClientMissionForce from '.'
 import Output, {
   TCommonOutputJson,
   TOutputOptions,
-} from '../../../../shared/missions/forces/output'
+} from 'metis/shared/missions/forces/output.ts'
+import ClientActionExecution from 'src/missions/actions/executions.ts'
+import { TClientMissionTypes } from 'src/missions/index.ts'
+import ClientMissionForce from './index.ts'
 
 /**
  * An output that's displayed in a force's output panel on the client.

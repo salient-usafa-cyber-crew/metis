@@ -1,6 +1,6 @@
 // ErrorBoundary.tsx
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary'
-import { LoginRequiredError } from 'src/toolbox/hooks'
+import { LoginRequiredError } from 'src/toolbox/hooks.tsx'
 
 /**
  * Catches errors in the component tree and renders a fallback UI.

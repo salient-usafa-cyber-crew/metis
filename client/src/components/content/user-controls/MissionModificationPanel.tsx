@@ -1,10 +1,10 @@
-import { useGlobalContext } from 'src/context'
-import ClientMission from 'src/missions'
-import { compute } from 'src/toolbox'
-import { useRequireLogin } from 'src/toolbox/hooks'
-import { SingleTypeObject } from '../../../../../shared/toolbox/objects'
-import Prompt from '../communication/Prompt'
-import ButtonSvgPanel, { TValidPanelButton } from './buttons/ButtonSvgPanel'
+import { SingleTypeObject } from 'metis/shared/toolbox/objects.ts'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientMission from 'src/missions/index.ts'
+import { useRequireLogin } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Prompt from '../communication/Prompt.tsx'
+import ButtonSvgPanel, { TValidPanelButton } from './buttons/ButtonSvgPanel.tsx'
 import './MissionModificationPanel.scss'
 
 /**

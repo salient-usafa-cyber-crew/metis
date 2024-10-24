@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import ButtonSvg from 'src/components/content/user-controls/buttons/ButtonSvg'
-import { compute } from 'src/toolbox'
-import Tab, { TTab_P } from '.'
+import ButtonSvg from 'src/components/content/user-controls/buttons/ButtonSvg.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Tab, { TTab_P } from './index.tsx'
 import './TabBar.scss'
 
 /**

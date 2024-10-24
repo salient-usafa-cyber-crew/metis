@@ -1,30 +1,29 @@
-import { TCommonSession } from 'metis/sessions'
-import { TCommonSessionMember } from 'metis/sessions/members'
-import { TCommonTargetEnv } from 'metis/target-environments'
-import { TCommonTarget } from 'metis/target-environments/targets'
-import { TCommonUser } from 'metis/users'
+import { TCommonSession } from 'metis/sessions/index.ts'
+import { TCommonSessionMember } from 'metis/sessions/members/index.ts'
+import { TCommonTargetEnv } from 'metis/target-environments/index.ts'
+import { TCommonTarget } from 'metis/target-environments/targets.ts'
+import { TCommonUser } from 'metis/users/index.ts'
 import { v4 as generateHash } from 'uuid'
-import context from '../context'
-import { AnyObject } from '../toolbox/objects'
-import { TAction, TCommonMissionAction } from './actions'
-import IActionExecution from './actions/executions'
-import IActionOutcome from './actions/outcomes'
-import { TCommonEffect, TEffect } from './effects'
-import {
-  MissionForce,
+import context from '../context/index.ts'
+import { AnyObject } from '../toolbox/objects.ts'
+import IActionExecution from './actions/executions.ts'
+import { TAction, TCommonMissionAction } from './actions/index.ts'
+import IActionOutcome from './actions/outcomes.ts'
+import { TCommonEffect, TEffect } from './effects/index.ts'
+import MissionForce, {
   TCommonMissionForce,
   TCommonMissionForceJson,
   TForce,
   TMissionForceOptions,
-} from './forces'
-import { TCommonOutput } from './forces/output'
-import { TCommonMissionNode, TNode } from './nodes'
+} from './forces/index.ts'
+import { TCommonOutput } from './forces/output.ts'
+import { TCommonMissionNode, TNode } from './nodes/index.ts'
 import MissionPrototype, {
   TCommonMissionPrototype,
   TCommonMissionPrototypeJson,
   TMissionPrototypeOptions,
   TPrototype,
-} from './nodes/prototypes'
+} from './nodes/prototypes.ts'
 
 /**
  * This represents a mission for a student to complete.

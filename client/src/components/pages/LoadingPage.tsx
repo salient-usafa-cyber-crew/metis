@@ -1,5 +1,5 @@
-import { useGlobalContext } from 'src/context'
-import { TPage_P } from '.'
+import { useGlobalContext } from 'src/context/index.tsx'
+import { TPage_P } from './index.ts'
 import './LoadingPage.scss'
 
 export interface ILoadingPage extends TPage_P {}

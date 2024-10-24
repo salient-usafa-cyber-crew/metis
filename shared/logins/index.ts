@@ -1,4 +1,4 @@
-import { TCommonUserJson } from 'metis/users'
+import { TCommonUserJson } from 'metis/users/index.ts'
 
 /**
  * The JSON representation of a login object.

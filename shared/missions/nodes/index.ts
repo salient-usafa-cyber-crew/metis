@@ -1,29 +1,29 @@
 import { v4 as generateHash } from 'uuid'
-import { TCommonMission, TCommonMissionTypes, TMission } from '..'
-import { Vector2D } from '../../../shared/toolbox/space'
-import ArrayToolbox from '../../toolbox/arrays'
-import MapToolbox from '../../toolbox/maps'
+import { Vector2D } from '../../../shared/toolbox/space.ts'
+import ArrayToolbox from '../../toolbox/arrays.ts'
+import MapToolbox from '../../toolbox/maps.ts'
+import {
+  default as TActionExecution,
+  TActionExecutionJson,
+  default as TCommonMissionExecution,
+  TExecution,
+} from '../actions/executions.ts'
 import {
   TCommonMissionAction,
   TCommonMissionActionJson,
   TMissionActionOptions,
-} from '../actions'
-import TActionExecution, {
-  TActionExecutionJson,
-  default as TCommonMissionExecution,
-  TExecution,
-} from '../actions/executions'
-import {
-  default as IActionOutcome,
+} from '../actions/index.ts'
+import IActionOutcome, {
   TActionOutcomeJson,
   default as TCommonActionOutcome,
   TOutcome,
-} from '../actions/outcomes'
-import { TCommonMissionForce, TForce } from '../forces'
+} from '../actions/outcomes.ts'
+import { TCommonMissionForce, TForce } from '../forces/index.ts'
+import { TCommonMission, TCommonMissionTypes, TMission } from '../index.ts'
 import MissionPrototype, {
   TCommonMissionPrototype,
   TPrototype,
-} from './prototypes'
+} from './prototypes.ts'
 
 /**
  * This represents an individual node in a mission.

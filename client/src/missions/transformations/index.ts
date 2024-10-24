@@ -1,4 +1,4 @@
-import ClientMission from '..'
+import ClientMission from '../index.ts'
 
 /**
  * Represents a transformation that can be applied to a mission,

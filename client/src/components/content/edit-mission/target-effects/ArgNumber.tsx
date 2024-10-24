@@ -1,8 +1,8 @@
+import { TNumberArg } from 'metis/shared/target-environments/args/number-arg.ts'
 import { useEffect, useState } from 'react'
-import { ClientEffect } from 'src/missions/effects'
-import { usePostInitEffect } from 'src/toolbox/hooks'
-import { TNumberArg } from '../../../../../../shared/target-environments/args/number-arg'
-import { DetailNumber } from '../../form/DetailNumber'
+import ClientEffect from 'src/missions/effects/index.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { DetailNumber } from '../../form/DetailNumber.tsx'
 
 /**
  * Renders a number input box for the argument whose type is `"number"`.

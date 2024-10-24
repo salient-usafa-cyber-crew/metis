@@ -1,10 +1,10 @@
-import Tooltip from 'src/components/content/communication/Tooltip'
-import ClientMissionNode from 'src/missions/nodes'
+import { Vector2D } from 'metis/shared/toolbox/space.ts'
+import Tooltip from 'src/components/content/communication/Tooltip.tsx'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
 import ClientMissionPrototype, {
   TPrototypeRelation,
-} from 'src/missions/nodes/prototypes'
-import { compute } from 'src/toolbox'
-import { Vector2D } from '../../../../../../../shared/toolbox/space'
+} from 'src/missions/nodes/prototypes.ts'
+import { compute } from 'src/toolbox/index.ts'
 import './PrototypeSlot.scss'
 
 /* -- components -- */

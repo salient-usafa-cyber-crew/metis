@@ -1,17 +1,20 @@
 import { useRef } from 'react'
-import { useGlobalContext, useNavigationMiddleware } from 'src/context'
-import SessionClient from 'src/sessions'
-import { compute } from 'src/toolbox'
+import {
+  useGlobalContext,
+  useNavigationMiddleware,
+} from 'src/context/index.tsx'
+import SessionClient from 'src/sessions/index.ts'
 import {
   useEventListener,
   useMountHandler,
   useRequireLogin,
-} from 'src/toolbox/hooks'
-import { DefaultLayout } from '.'
-import Prompt from '../content/communication/Prompt'
-import { HomeLink, TNavigation } from '../content/general-layout/Navigation'
-import SessionMembers from '../content/session/members/SessionMembers'
-import { ButtonText } from '../content/user-controls/buttons/ButtonText'
+} from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import Prompt from '../content/communication/Prompt.tsx'
+import { HomeLink, TNavigation } from '../content/general-layout/Navigation.tsx'
+import SessionMembers from '../content/session/members/SessionMembers.tsx'
+import { ButtonText } from '../content/user-controls/buttons/ButtonText.tsx'
+import { DefaultLayout } from './index.tsx'
 import './LobbyPage.scss'
 
 /**

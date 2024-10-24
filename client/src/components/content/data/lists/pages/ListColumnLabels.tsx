@@ -1,13 +1,13 @@
 import { ReactNode } from 'react'
-import { compute } from 'src/toolbox'
+import { compute } from 'src/toolbox/index.ts'
 import {
   OPTIONS_COLUMN_WIDTH,
   OPTIONS_COLUMN_WIDTH_IF_LAST,
   useListContext,
-} from '../List'
-import ListColumnLabel from './ListColumnLabel'
+} from '../List.tsx'
+import ListColumnLabel from './ListColumnLabel.tsx'
 import './ListColumnLabels.scss'
-import { TListItem } from './ListItem'
+import { TListItem } from './ListItem.tsx'
 
 /**
  * Labels for the columns of a `List` component.

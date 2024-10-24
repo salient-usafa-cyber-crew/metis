@@ -1,22 +1,28 @@
 import memoizeOne from 'memoize-one'
-import { TNodeButton } from 'src/components/content/session/mission-map/objects/MissionNode'
-import { TEventListenerTarget } from 'src/toolbox/hooks'
-import { TClientMissionTypes, TMissionComponent, TMissionNavigable } from '..'
-import { TRequestMethod } from '../../../../shared/connect/data'
-import { TCommonMissionActionJson } from '../../../../shared/missions/actions'
-import { TActionExecutionJson } from '../../../../shared/missions/actions/executions'
-import { TActionOutcomeJson } from '../../../../shared/missions/actions/outcomes'
+import { TRequestMethod } from 'metis/shared/connect/data.ts'
+import { TActionExecutionJson } from 'metis/shared/missions/actions/executions.ts'
+import { TCommonMissionActionJson } from 'metis/shared/missions/actions/index.ts'
+import { TActionOutcomeJson } from 'metis/shared/missions/actions/outcomes.ts'
 import MissionNode, {
   ILoadOutcomeOptions,
   INodeOpenOptions,
   TMissionNodeJson,
   TMissionNodeOptions,
-} from '../../../../shared/missions/nodes'
-import ClientMissionAction, { TClientMissionActionOptions } from '../actions'
-import ClientActionExecution from '../actions/executions'
-import ClientActionOutcome from '../actions/outcomes'
-import ClientMissionForce from '../forces'
-import ClientMissionPrototype from './prototypes'
+} from 'metis/shared/missions/nodes/index.ts'
+import { TNodeButton } from 'src/components/content/session/mission-map/objects/MissionNode.tsx'
+import { TEventListenerTarget } from 'src/toolbox/hooks.tsx'
+import ClientActionExecution from '../actions/executions.ts'
+import ClientMissionAction, {
+  TClientMissionActionOptions,
+} from '../actions/index.ts'
+import ClientActionOutcome from '../actions/outcomes.ts'
+import ClientMissionForce from '../forces/index.ts'
+import {
+  TClientMissionTypes,
+  TMissionComponent,
+  TMissionNavigable,
+} from '../index.ts'
+import ClientMissionPrototype from './prototypes.ts'
 
 /**
  * Class for managing mission nodes on the client.

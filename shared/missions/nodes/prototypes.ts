@@ -1,5 +1,5 @@
 import { v4 as generateHash } from 'uuid'
-import { TCommonMission, TCommonMissionTypes, TMission } from '..'
+import { TCommonMission, TCommonMissionTypes, TMission } from '../index.ts'
 
 /**
  * This represents a prototype for a mission node displayed

@@ -1,11 +1,11 @@
 import axios from 'axios'
-import { TListItem } from 'src/components/content/data/lists/pages/ListItem'
+import UserAccess from 'metis/shared/users/accesses.ts'
 import User, {
   TCommonUser,
   TCommonUserJson,
   TUserOptions,
-} from '../../../shared/users'
-import UserAccess from '../../../shared/users/accesses'
+} from 'metis/shared/users/index.ts'
+import { TListItem } from 'src/components/content/data/lists/pages/ListItem.tsx'
 
 /**
  * Class for managing users on the client.

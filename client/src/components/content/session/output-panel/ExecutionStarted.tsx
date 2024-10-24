@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import ClientOutput from 'src/missions/forces/output'
-import ClientMissionNode from 'src/missions/nodes'
-import { compute } from 'src/toolbox'
-import { useMountHandler } from 'src/toolbox/hooks'
-import RichTextOutputBox from '../../communication/RichTextOutputBox'
-import Tooltip from '../../communication/Tooltip'
+import ClientOutput from 'src/missions/forces/output.ts'
+import ClientMissionNode from 'src/missions/nodes/index.ts'
+import { useMountHandler } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import RichTextOutputBox from '../../communication/RichTextOutputBox.tsx'
+import Tooltip from '../../communication/Tooltip.tsx'
 
 /**
  * Renders the message for when an action is started.

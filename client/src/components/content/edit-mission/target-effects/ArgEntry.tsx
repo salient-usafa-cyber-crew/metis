@@ -1,8 +1,8 @@
-import { ClientEffect } from 'src/missions/effects'
-import { compute } from 'src/toolbox'
-import { TTargetArg } from '../../../../../../shared/target-environments/args'
+import { TTargetArg } from 'metis/shared/target-environments/args/index.ts'
+import ClientEffect from 'src/missions/effects/index.ts'
+import { compute } from 'src/toolbox/index.ts'
 import './ArgEntry.scss'
-import ArgGrouping from './ArgGrouping'
+import ArgGrouping from './ArgGrouping.tsx'
 
 /**
  * Entry fields for the effect's arguments.

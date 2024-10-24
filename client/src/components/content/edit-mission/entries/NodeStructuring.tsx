@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import ClientMission from 'src/missions'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientMission from 'src/missions/index.ts'
 import ClientMissionPrototype, {
   TPrototypeRelation,
-} from 'src/missions/nodes/prototypes'
-import MoreInformation from '../../communication/MoreInformation'
-import Tooltip from '../../communication/Tooltip'
+} from 'src/missions/nodes/prototypes.tsx'
+import MoreInformation from '../../communication/MoreInformation.tsx'
+import Tooltip from '../../communication/Tooltip.tsx'
 import './NodeStructuring.scss'
 
 // This is a enum used to describe

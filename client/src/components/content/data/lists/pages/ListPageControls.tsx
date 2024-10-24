@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import { compute } from 'src/toolbox'
-import Tooltip from '../../../communication/Tooltip'
-import { useListContext } from '../List'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../../../communication/Tooltip.tsx'
+import { useListContext } from '../List.tsx'
 import './ListPageControls.scss'
 
 /**

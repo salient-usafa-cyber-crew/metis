@@ -1,13 +1,13 @@
 {
   "name": "metis-server",
   "description": "",
-  "main": "start.ts",
+  "exports": "./start.ts",
+  "type": "module",
   "scripts": {
-    "start": "./node_modules/.bin/ts-node -r tsconfig-paths/register start",
-    "dev": "./node_modules/.bin/nodemon --exec './node_modules/.bin/ts-node' -r tsconfig-paths/register start",
-    "test-start": "cd ./tests && npm run start",
-    "test": "cd ./tests && npm run test",
-    "test-coverage": "cd ./tests && npm run test-coverage"
+    "start": "node_modules/.bin/tsx start.ts",
+    "dev": "node_modules/.bin/nodemon --exec './node_modules/.bin/tsx' start.ts",
+    "test": "mocha",
+    "test-coverage": "nyc mocha"
   },
   "author": "Jordan M. Stokes",
   "license": "ISC",
@@ -19,13 +19,17 @@
     "@types/express": "^4.17.17",
     "@types/express-session": "^1.17.7",
     "@types/express-winston": "^4.0.0",
+    "@types/mocha": "^10.0.8",
     "@types/multer": "^1.4.7",
     "@types/node": "^20.5.7",
     "@types/seedrandom": "^3.0.5",
+    "@types/superagent": "^8.1.9",
     "@types/typescript": "^2.0.0",
     "@types/uuid": "^9.0.8",
     "@types/winston": "^2.4.4",
     "bcryptjs": "^2.4.3",
+    "chai": "^5.1.1",
+    "chai-http": "^5.1.1",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
@@ -35,6 +39,7 @@
     "express-session": "^1.17.3",
     "express-winston": "^4.2.0",
     "isomorphic-dompurify": "^1.9.0",
+    "mocha": "^10.7.3",
     "mongoose": "^6.11.2",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^3.1.7",
@@ -42,11 +47,13 @@
     "seedrandom": "^3.0.5",
     "socket.io": "^4.8.0",
     "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.19.1",
     "typescript": "^5.2.2",
     "uuid": "^9.0.0",
     "winston": "^3.10.0"
   },
   "devDependencies": {
+    "@types/chai": "^5.0.0",
     "ts-node": "^10.9.1"
   }
 }

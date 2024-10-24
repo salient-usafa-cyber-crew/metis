@@ -1,4 +1,4 @@
-import { TClientEvents, TRequestOfResponse, TServerEvents } from './data'
+import { TClientEvents, TRequestOfResponse, TServerEvents } from './data.ts'
 
 /**
  * An abstract class representing an error sent in a web socket connection from one party to another.

@@ -1,11 +1,11 @@
-import Effect, { TEffectOptions } from 'metis/missions/effects'
-import { TTargetEnvContextEffect } from 'metis/server/target-environments/context-provider'
-import ServerTarget from 'metis/server/target-environments/targets'
-import { TTargetArg } from 'metis/target-environments/args'
-import ForceArg from 'metis/target-environments/args/force-arg'
-import NodeArg from 'metis/target-environments/args/node-arg'
-import { AnyObject } from 'metis/toolbox/objects'
-import { TServerMissionTypes } from '..'
+import Effect, { TEffectOptions } from 'metis/missions/effects/index.ts'
+import { TTargetEnvContextEffect } from 'metis/server/target-environments/context-provider.ts'
+import ServerTarget from 'metis/server/target-environments/targets.ts'
+import ForceArg from 'metis/target-environments/args/force-arg.ts'
+import { TTargetArg } from 'metis/target-environments/args/index.ts'
+import NodeArg from 'metis/target-environments/args/node-arg.ts'
+import { AnyObject } from 'metis/toolbox/objects.ts'
+import { TServerMissionTypes } from '../index.ts'
 
 /**
  * Class representing an effect on the server-side that can be

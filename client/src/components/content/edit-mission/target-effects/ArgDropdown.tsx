@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react'
-import { ClientEffect } from 'src/missions/effects'
-import { compute } from 'src/toolbox'
-import { usePostInitEffect } from 'src/toolbox/hooks'
 import {
   TDropdownArg,
   TDropdownArgOption,
-} from '../../../../../../shared/target-environments/args/dropdown-arg'
-import { DetailDropdown } from '../../form/DetailDropdown'
+} from 'metis/shared/target-environments/args/dropdown-arg.ts'
+import { useEffect, useState } from 'react'
+import ClientEffect from 'src/missions/effects/index.ts'
+import { usePostInitEffect } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import { DetailDropdown } from '../../form/DetailDropdown.tsx'
 
 /**
  * Renders a dropdown for the argument whose type is `"dropdown"`.

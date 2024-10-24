@@ -1,7 +1,7 @@
-import { compute } from 'src/toolbox'
-import Tooltip from '../../../communication/Tooltip'
-import { TListColumnType, useListContext } from '../List'
-import { TListItem } from './ListItem'
+import { compute } from 'src/toolbox/index.ts'
+import Tooltip from '../../../communication/Tooltip.tsx'
+import { TListColumnType, useListContext } from '../List.tsx'
+import { TListItem } from './ListItem.tsx'
 import './ListItemCell.scss'
 
 /**

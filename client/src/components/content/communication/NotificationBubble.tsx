@@ -1,7 +1,7 @@
-import { useListComponent } from 'src/toolbox/hooks'
-import Notification from '../../../notifications'
-import Markdown, { MarkdownTheme } from '../general-layout/Markdown'
-import { ButtonText } from '../user-controls/buttons/ButtonText'
+import { useListComponent } from 'src/toolbox/hooks.tsx'
+import Notification from '../../../notifications/index.ts'
+import Markdown, { MarkdownTheme } from '../general-layout/Markdown.tsx'
+import { ButtonText } from '../user-controls/buttons/ButtonText.tsx'
 import './NotificationBubble.scss'
 
 // This will brand the app with the

@@ -1,5 +1,5 @@
-import SessionClient from 'src/sessions'
-import SessionMembers from './SessionMembers'
+import SessionClient from 'src/sessions/index.ts'
+import SessionMembers from './SessionMembers.tsx'
 import './SessionMembersPanel.scss'
 
 /**

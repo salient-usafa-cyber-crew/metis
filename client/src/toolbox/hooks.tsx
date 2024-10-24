@@ -1,7 +1,7 @@
+import { TLogin } from 'metis/shared/logins/index.ts'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import ClientUser from 'src/users'
-import { TLogin } from '../../../shared/logins'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientUser from 'src/users/index.ts'
 
 /**
  * The callback for the useEffect hook.

@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { useGlobalContext } from 'src/context'
-import ClientSession from 'src/sessions'
-import ClientSessionMember from 'src/sessions/members'
-import { compute } from 'src/toolbox'
-import { useEventListener, useRequireLogin } from 'src/toolbox/hooks'
-import SessionMemberRow from './SessionMemberRow'
+import { useGlobalContext } from 'src/context/index.tsx'
+import ClientSession from 'src/sessions/index.ts'
+import ClientSessionMember from 'src/sessions/members.ts'
+import { useEventListener, useRequireLogin } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import SessionMemberRow from './SessionMemberRow.tsx'
 import './SessionMembers.scss'
 
 /**

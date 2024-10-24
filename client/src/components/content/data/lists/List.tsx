@@ -1,20 +1,19 @@
 import React, { useContext, useRef, useState } from 'react'
-import { compute } from 'src/toolbox'
-import { useDefaultProps } from 'src/toolbox/hooks'
-import { TButtonSvgType } from '../../user-controls/buttons/ButtonSvg'
-import { TSvgPanelOnClick } from '../../user-controls/buttons/ButtonSvgPanel_v2'
+import { useDefaultProps } from 'src/toolbox/hooks.tsx'
+import { compute } from 'src/toolbox/index.ts'
+import { TButtonSvgType } from '../../user-controls/buttons/ButtonSvg.tsx'
+import { TSvgPanelOnClick } from '../../user-controls/buttons/ButtonSvgPanel_v2.tsx'
 import './List.scss'
-import ListButtons from './navs/ListButtons'
-import ListResizeHandler from './ListResizeHandler'
-import ListNav from './navs/ListNav'
+import ListResizeHandler from './ListResizeHandler.tsx'
+import ListNav from './navs/ListNav.tsx'
 import {
   TGetItemButtonTooltip,
   TGetItemTooltip,
   TListItem,
   TOnItemButtonClick,
   TOnItemSelection,
-} from './pages/ListItem'
-import ListPage, { TListPage_P } from './pages/ListPage'
+} from './pages/ListItem.tsx'
+import ListPage, { TListPage_P } from './pages/ListPage.tsx'
 
 /* -- CONSTANTS -- */
 

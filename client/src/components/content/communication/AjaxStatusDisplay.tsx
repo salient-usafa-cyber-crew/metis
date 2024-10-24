@@ -1,5 +1,5 @@
+import { TAjaxStatus } from 'metis/shared/toolbox/ajax.ts'
 import React from 'react'
-import { TAjaxStatus } from '../../../../../shared/toolbox/ajax'
 import './AjaxStatusDisplay.scss'
 
 // -- interfaces --
