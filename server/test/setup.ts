@@ -1,18 +1,21 @@
 import { expect } from 'chai'
-import { before } from 'mocha'
-import { testLogger } from '../logging/index'
-import { userCredentials } from './data'
-import { agent } from './index.test'
-import { testServer } from './start'
+import { before } from 'mocha/index.ts'
+import { testLogger } from '../logging/index.ts'
+import { userCredentials } from './data.ts'
+import { agent } from './index.ts'
+import { testServer } from './server.ts'
 
 /**
  * Sets up the test environment by starting the test server and creating a session with a user.
  */
-export default function Setup(): void {
+export function Setup(): void {
   return before(async function () {
     try {
       // Checks to make sure the correct database is being used
       if (testServer.mongoDB === 'metis-test') {
+        // Starts the test server
+        await testServer.serve()
+
         // Creates a session with a user because
         // certain API routes require authentication
         // for access

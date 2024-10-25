@@ -1,7 +1,7 @@
 import express, { Router } from 'express'
-import MetisServer from 'metis/server'
-import { TMetisRouterMap } from 'metis/server/http/router'
-import { auth } from 'metis/server/middleware/users'
+import { TMetisRouterMap } from 'metis/server/http/router.ts'
+import MetisServer from 'metis/server/index.ts'
+import { auth } from 'metis/server/middleware/users.ts'
 
 const routerMap: TMetisRouterMap = (
   router: Router,

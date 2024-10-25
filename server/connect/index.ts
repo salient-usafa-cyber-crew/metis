@@ -1,13 +1,13 @@
 import express from 'express'
-import { ServerEmittedError } from 'metis/connect/errors'
-import ServerLogin from 'metis/server/logins'
+import { ServerEmittedError } from 'metis/connect/errors.ts'
+import ServerLogin from 'metis/server/logins/index.ts'
+import * as socketIo from 'socket.io'
 import { Socket, Server as SocketIoServer } from 'socket.io'
-import MetisServer from '../index'
-import SessionServer from '../sessions'
-import ClientConnection from './clients'
-import authMiddleware from './middleware/auth'
-import rateLimitMiddleware from './middleware/rate-limit'
-const createSocketIoServer = require('socket.io')
+import MetisServer from '../index.ts'
+import SessionServer from '../sessions/index.ts'
+import ClientConnection from './clients.ts'
+import authMiddleware from './middleware/auth.ts'
+import rateLimitMiddleware from './middleware/rate-limit.ts'
 
 /* -- CLASSES -- */
 
@@ -32,7 +32,7 @@ export default class MetisWsServer {
    */
   public constructor(metis: MetisServer) {
     this.metis = metis
-    this.socketIo = createSocketIoServer(metis.httpServer)
+    this.socketIo = new socketIo.Server(metis.httpServer)
   }
 
   /**

@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response } from 'express-serve-static-core'
-import { TCommonUserJson } from 'metis/users'
-import { TUserPermissionId } from 'metis/users/permissions'
-import UserModel from '../database/models/users'
-import ServerLogin from '../logins'
-import SessionServer from '../sessions'
+import { TCommonUserJson } from 'metis/users/index.ts'
+import { TUserPermissionId } from 'metis/users/permissions.ts'
+import UserModel from '../database/models/users.ts'
+import ServerLogin from '../logins/index.ts'
+import SessionServer from '../sessions/index.ts'
 
 /**
  * Middleware used to enforce authorization for a given route.

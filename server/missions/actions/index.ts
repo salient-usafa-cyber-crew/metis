@@ -1,25 +1,25 @@
-import MissionAction, {
-  TCommonMissionActionJson,
-  TMissionActionOptions,
-} from 'metis/missions/actions'
 import IActionExecution, {
   TActionExecutionJson,
   TExecutionCheats,
-} from 'metis/missions/actions/executions'
-import { TCommonEffectJson } from 'metis/missions/effects'
-import { TTargetEnvContextAction } from 'metis/server/target-environments/context-provider'
-import { TSessionConfig } from 'metis/sessions'
+} from 'metis/missions/actions/executions.ts'
+import MissionAction, {
+  TCommonMissionActionJson,
+  TMissionActionOptions,
+} from 'metis/missions/actions/index.ts'
+import { TCommonEffectJson } from 'metis/missions/effects/index.ts'
+import { TTargetEnvContextAction } from 'metis/server/target-environments/context-provider.ts'
+import { TSessionConfig } from 'metis/sessions/index.ts'
 import seedrandom, { PRNG } from 'seedrandom'
-import { TServerMissionTypes } from '..'
-import ServerEffect, { TServerEffectOptions } from '../effects'
-import ServerMissionNode from '../nodes'
-import ServerActionExecution from './executions'
-import { ServerPotentialOutcome, ServerRealizedOutcome } from './outcomes'
+import ServerEffect, { TServerEffectOptions } from '../effects/index.ts'
+import { TServerMissionTypes } from '../index.ts'
+import ServerMissionNode from '../nodes/index.ts'
+import ServerActionExecution from './executions.ts'
+import { ServerPotentialOutcome, ServerRealizedOutcome } from './outcomes.ts'
 
 /**
  * Class for managing mission actions on the server.
  */
-export default class ServerMissionAction extends MissionAction<TServerMissionTypes> {
+export default class ServerMissionAction extends MissionAction.default<TServerMissionTypes> {
   /**
    * The RNG used to generate random numbers for the action.
    */
@@ -156,19 +156,20 @@ export type TServerMissionActionOptions = TMissionActionOptions & {}
 /**
  * Options for TExecuteOptions.
  */
-export type TExecuteOptions<TActionExecution extends IActionExecution> = {
-  /**
-   * The configuration for the session.
-   */
-  sessionConfig: TSessionConfig
-  /**
-   * Cheats to apply when executing the action.
-   * @note Any cheats ommitted will be treated
-   * as `false`, or disabled.
-   */
-  cheats?: Partial<TExecutionCheats>
-  /**
-   * Callback for when the action execution process is initated. Passes a timestamp of when the process is expected to conclude and the promise to be resolved.
-   */
-  onInit?: (execution: TActionExecution) => void
-}
+export type TExecuteOptions<TActionExecution extends IActionExecution.default> =
+  {
+    /**
+     * The configuration for the session.
+     */
+    sessionConfig: TSessionConfig
+    /**
+     * Cheats to apply when executing the action.
+     * @note Any cheats ommitted will be treated
+     * as `false`, or disabled.
+     */
+    cheats?: Partial<TExecutionCheats>
+    /**
+     * Callback for when the action execution process is initated. Passes a timestamp of when the process is expected to conclude and the promise to be resolved.
+     */
+    onInit?: (execution: TActionExecution) => void
+  }

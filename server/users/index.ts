@@ -1,11 +1,11 @@
-import User, { TCommonUserJson, TUserOptions } from 'metis/users'
-import { TTargetEnvContextUser } from '../target-environments/context-provider'
+import User, { TCommonUserJson, TUserOptions } from 'metis/users/index.ts'
+import { TTargetEnvContextUser } from '../target-environments/context-provider.ts'
 
 /**
  * Class for managing users on the server.
  * @extends {User}
  */
-export default class ServerUser extends User {
+export default class ServerUser extends User.default {
   /**
    * Validates a hashed password.
    * @param password The password to validate.

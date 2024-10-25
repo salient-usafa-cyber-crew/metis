@@ -1,20 +1,23 @@
 import { Router } from 'express'
 import { Request, Response } from 'express-serve-static-core'
 import fs from 'fs'
-import { TCommonMissionJson } from 'metis/missions'
-import MetisServer from 'metis/server'
-import MetisDatabase from 'metis/server/database'
-import { filterErrors_findOne } from 'metis/server/database/api-call-handlers'
-import InfoModel from 'metis/server/database/models/info'
-import MissionModel from 'metis/server/database/models/missions'
-import { TMetisRouterMap } from 'metis/server/http/router'
-import { databaseLogger } from 'metis/server/logging'
+import { TCommonMissionJson } from 'metis/missions/index.ts'
+import { filterErrors_findOne } from 'metis/server/database/api-call-handlers/index.ts'
+import MetisDatabase from 'metis/server/database/index.ts'
+import InfoModel from 'metis/server/database/models/info.ts'
+import MissionModel from 'metis/server/database/models/missions.ts'
+import { TMetisRouterMap } from 'metis/server/http/router.ts'
+import MetisServer from 'metis/server/index.ts'
+import { databaseLogger } from 'metis/server/logging/index.ts'
 import mongoose from 'mongoose'
 import path from 'path'
 import { v4 as generateHash } from 'uuid'
-import { RequestBodyFilters, defineRequests } from '../../middleware/requests'
-import uploads from '../../middleware/uploads'
-import { auth } from '../../middleware/users'
+import {
+  RequestBodyFilters,
+  defineRequests,
+} from '../../middleware/requests.ts'
+import uploads from '../../middleware/uploads.ts'
+import { auth } from '../../middleware/users.ts'
 
 type MulterFile = Express.Multer.File
 

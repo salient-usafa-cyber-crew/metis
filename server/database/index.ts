@@ -1,17 +1,17 @@
 import { exec } from 'child_process'
 import formatDate from 'dateformat'
-import MetisServer from 'metis/server'
-import { demoMissionData } from 'metis/server/database/initial-mission-data'
-import InfoModel from 'metis/server/database/models/info'
-import MissionModel from 'metis/server/database/models/missions'
-import UserModel, { hashPassword } from 'metis/server/database/models/users'
-import { databaseLogger } from 'metis/server/logging'
+import { demoMissionData } from 'metis/server/database/initial-mission-data.ts'
+import InfoModel from 'metis/server/database/models/info.ts'
+import MissionModel from 'metis/server/database/models/missions.ts'
+import UserModel, { hashPassword } from 'metis/server/database/models/users.ts'
+import MetisServer from 'metis/server/index.ts'
+import { databaseLogger } from 'metis/server/logging/index.ts'
 import mongoose, { ConnectOptions } from 'mongoose'
 import {
   adminUserData,
   instructorUserData,
   studentUserData,
-} from './initial-user-data'
+} from './initial-user-data.ts'
 
 /**
  * Represents a connection to the Metis database.

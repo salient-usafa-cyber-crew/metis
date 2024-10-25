@@ -1,17 +1,17 @@
 import { Router } from 'express'
 import { Request, Response } from 'express-serve-static-core'
-import { TCommonMissionJson } from 'metis/missions'
-import MetisServer from 'metis/server'
-import MissionModel from 'metis/server/database/models/missions'
-import { databaseLogger, sessionLogger } from 'metis/server/logging'
+import { TCommonMissionJson } from 'metis/missions/index.ts'
+import MissionModel from 'metis/server/database/models/missions.ts'
+import MetisServer from 'metis/server/index.ts'
+import { databaseLogger, sessionLogger } from 'metis/server/logging/index.ts'
 import defineRequests, {
   RequestBodyFilters,
-} from 'metis/server/middleware/requests'
-import ServerMission from 'metis/server/missions'
-import SessionServer from 'metis/server/sessions'
-import ServerUser from 'metis/server/users'
-import { TSessionBasicJson, TSessionConfig } from 'metis/sessions'
-import { auth } from '../../middleware/users'
+} from 'metis/server/middleware/requests.ts'
+import ServerMission from 'metis/server/missions/index.ts'
+import SessionServer from 'metis/server/sessions/index.ts'
+import ServerUser from 'metis/server/users/index.ts'
+import { TSessionBasicJson, TSessionConfig } from 'metis/sessions/index.ts'
+import { auth } from '../../middleware/users.ts'
 
 const routerMap = (router: Router, server: MetisServer, done: () => void) => {
   /* ---------------------------- CREATE ---------------------------- */

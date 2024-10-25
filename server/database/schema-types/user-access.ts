@@ -1,5 +1,6 @@
-import { databaseLogger } from 'metis/server/logging'
-import UserAccess, { TUserAccess } from 'metis/users/accesses'
+import { UserAccess } from 'metis/server/global.ts'
+import { databaseLogger } from 'metis/server/logging/index.ts'
+import { TUserAccess } from 'metis/users/accesses.ts'
 import mongoose from 'mongoose'
 
 /**

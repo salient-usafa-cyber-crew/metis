@@ -1,10 +1,10 @@
-import { TCommonOutputJson } from 'metis/missions/forces/output'
-import ServerEffect from 'metis/server/missions/effects'
-import SessionServer from 'metis/server/sessions'
-import { AnyObject } from 'metis/toolbox/objects'
-import { plcApiLogger } from '../logging'
-import ServerMission from '../missions'
-import ServerUser from '../users'
+import { TCommonOutputJson } from 'metis/missions/forces/output.ts'
+import ServerEffect from 'metis/server/missions/effects/index.ts'
+import SessionServer from 'metis/server/sessions/index.ts'
+import { AnyObject } from 'metis/toolbox/objects.ts'
+import { plcApiLogger } from '../logging/index.ts'
+import ServerMission from '../missions/index.ts'
+import ServerUser from '../users/index.ts'
 
 /**
  * The context provider for the target environment.

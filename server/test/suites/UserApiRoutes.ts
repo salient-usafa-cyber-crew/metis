@@ -1,12 +1,12 @@
 import { expect } from 'chai'
-import { testLogger } from '../../logging'
-import { correctUser, userWithNoPassword } from '../data'
-import { agent, permittedUserAccess } from '../setup.js'
+import { testLogger } from '../../logging/index.ts'
+import { correctUser, userWithNoPassword } from '../data.ts'
+import { agent, permittedUserAccess } from '../index.ts'
 
 /**
  * Tests each of the API routes that are used to access the user data in the database.
  */
-export default function UserApiRoutes(): Mocha.Suite {
+export function UserApiRoutes(): Mocha.Suite {
   return describe('User API Routes', function () {
     it('User should be logged in as an admin to be able to create users via the API', async function () {
       try {

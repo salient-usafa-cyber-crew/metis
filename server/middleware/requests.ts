@@ -1,8 +1,8 @@
 // ------- IMPORTS ------- //
 import { NextFunction, Request, Response } from 'express-serve-static-core'
-import { AnyObject } from 'metis/toolbox/objects'
-import User from 'metis/users'
-import UserAccess, { TUserAccess } from 'metis/users/accesses'
+import { AnyObject } from 'metis/toolbox/objects.ts'
+import UserAccess, { TUserAccess } from 'metis/users/accesses.ts'
+import User from 'metis/users/index.ts'
 import { isObjectIdOrHexString } from 'mongoose'
 
 // ------- GLOBAL VARIABLES ------- //

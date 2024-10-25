@@ -1,17 +1,17 @@
 import IActionOutcome, {
   TActionOutcomeJson,
-} from 'metis/missions/actions/outcomes'
+} from 'metis/missions/actions/outcomes.ts'
 import { PRNG } from 'seedrandom'
-import ServerMissionAction from '.'
-import { TServerMissionTypes } from '..'
-import ServerMissionNode from '../nodes'
+import { TServerMissionTypes } from '../index.ts'
+import ServerMissionNode from '../nodes/index.ts'
+import ServerMissionAction from './index.ts'
 
 /**
  * An outcome for the execution of an action via the Mission.execute method.
  * @note Added to the node automatically by calling the `ServerMissionNode.handleOutcome` method in the constructor.
  */
 export class ServerPotentialOutcome
-  implements IActionOutcome<TServerMissionTypes>
+  implements IActionOutcome.default<TServerMissionTypes>
 {
   // Implemented
   public readonly action: ServerMissionAction
@@ -95,7 +95,7 @@ export class ServerPotentialOutcome
 /**
  * A realized outcome for the execution of an action via the Mission.execute method.
  */
-export class ServerRealizedOutcome implements IActionOutcome {
+export class ServerRealizedOutcome implements IActionOutcome.default {
   // Implemented
   public readonly action: ServerMissionAction
   // Implemented

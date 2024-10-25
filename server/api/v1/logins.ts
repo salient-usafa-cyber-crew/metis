@@ -1,15 +1,15 @@
 import { Router } from 'express'
 import { NextFunction, Request, Response } from 'express-serve-static-core'
-import MetisServer from 'metis/server'
-import UserModel from 'metis/server/database/models/users'
-import { StatusError } from 'metis/server/http'
-import { TMetisRouterMap } from 'metis/server/http/router'
-import ServerLogin from 'metis/server/logins'
+import UserModel from 'metis/server/database/models/users.ts'
+import { StatusError } from 'metis/server/http/index.ts'
+import { TMetisRouterMap } from 'metis/server/http/router.ts'
+import MetisServer from 'metis/server/index.ts'
+import ServerLogin from 'metis/server/logins/index.ts'
 import defineRequests, {
   RequestBodyFilters,
-} from 'metis/server/middleware/requests'
-import SessionServer from 'metis/server/sessions'
-import ServerUser from 'metis/server/users'
+} from 'metis/server/middleware/requests.ts'
+import SessionServer from 'metis/server/sessions/index.ts'
+import ServerUser from 'metis/server/users/index.ts'
 
 const routerMap: TMetisRouterMap = (
   router: Router,

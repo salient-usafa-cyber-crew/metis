@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { testLogger } from '../../logging'
+import { testLogger } from '../../logging/index.ts'
 import {
   correctUpdateTestMission,
   createMissionWithNoForceData,
@@ -7,13 +7,13 @@ import {
   updateMissionWithNoForceData,
   updateMissionWithNoMissionId,
   updateMissionWithNoNodeStructure,
-} from '../data'
-import { agent, permittedUserAccess } from '../index.test'
+} from '../data.ts'
+import { agent, permittedUserAccess } from '../index.ts'
 
 /**
  * Tests for each mission route on the API.
  */
-export default function MissionApiRoutes(): Mocha.Suite {
+export function MissionApiRoutes(): Mocha.Suite {
   return describe('API Mission Routes', function () {
     // Stores all the missions that were in
     // the database before the tests were run

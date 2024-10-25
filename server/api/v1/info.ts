@@ -1,8 +1,8 @@
 import { Router } from 'express'
 import { Request, Response } from 'express-serve-static-core'
 import fs from 'fs'
-import MetisServer from 'metis/server'
-import { TMetisRouterMap } from 'metis/server/http/router'
+import { TMetisRouterMap } from 'metis/server/http/router.ts'
+import MetisServer from 'metis/server/index.ts'
 import path from 'path'
 
 const routerMap: TMetisRouterMap = (

@@ -1,16 +1,17 @@
-import { TServerEvents, TServerMethod } from 'metis/connect/data'
-import { ServerEmittedError } from 'metis/connect/errors'
-import SessionMember from 'metis/sessions/members'
-import MemberRole, { TMemberRoleId } from 'metis/sessions/members/roles'
-import StringToolbox from 'metis/toolbox/strings'
-import SessionServer from '.'
-import ClientConnection from '../connect/clients'
-import { TServerMissionTypes } from '../missions'
+import { TServerEvents, TServerMethod } from 'metis/connect/data.ts'
+import { ServerEmittedError } from 'metis/connect/errors.ts'
+import MemberRole from 'metis/server/global.ts'
+import SessionMember from 'metis/sessions/members/index.ts'
+import { TMemberRoleId } from 'metis/sessions/members/roles.ts'
+import StringToolbox from 'metis/toolbox/strings.ts'
+import ClientConnection from '../connect/clients.ts'
+import { TServerMissionTypes } from '../missions/index.ts'
+import SessionServer from './index.ts'
 
 /**
  * Server-side representation of a session member.
  */
-export default class ServerSessionMember extends SessionMember<TServerMissionTypes> {
+export default class ServerSessionMember extends SessionMember.default<TServerMissionTypes> {
   /**
    * The WS connection to the client where the given user is logged in.
    */
@@ -70,7 +71,7 @@ export default class ServerSessionMember extends SessionMember<TServerMissionTyp
     if (typeof role === 'string') role = MemberRole.get(role)
 
     return new ServerSessionMember(
-      StringToolbox.generateRandomId(),
+      StringToolbox.default.generateRandomId(),
       connection,
       role,
       forceId,

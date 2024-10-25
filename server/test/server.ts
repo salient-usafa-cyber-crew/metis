@@ -1,19 +1,19 @@
 import fs from 'fs'
-import MetisServer, { IMetisServerOptions } from 'metis/server'
-import routerMap_files from 'metis/server/api/v1/files'
-import routerMap_info from 'metis/server/api/v1/info'
-import routerMap_logins from 'metis/server/api/v1/logins'
-import routerMap_missions from 'metis/server/api/v1/missions'
-import routerMap_sessions from 'metis/server/api/v1/sessions'
-import routerMap_targetEnvironments from 'metis/server/api/v1/target-environments'
-import routerMap_users from 'metis/server/api/v1/users'
-import MetisRouter from 'metis/server/http/router'
-import routerMap_tests from './api/v1/routes-test'
+import routerMap_files from 'metis/server/api/v1/files.ts'
+import routerMap_info from 'metis/server/api/v1/info.ts'
+import routerMap_logins from 'metis/server/api/v1/logins.ts'
+import routerMap_missions from 'metis/server/api/v1/missions.ts'
+import routerMap_sessions from 'metis/server/api/v1/sessions.ts'
+import routerMap_targetEnvironments from 'metis/server/api/v1/target-environments.ts'
+import routerMap_users from 'metis/server/api/v1/users.ts'
+import MetisRouter from 'metis/server/http/router.ts'
+import MetisServer, { IMetisServerOptions } from 'metis/server/index.ts'
+import routerMap_tests from './api/v1/routes-test.ts'
 
 const environmentFilePath = './environment-test.json'
 let serverOptions: IMetisServerOptions = {}
 
-console.log('Reading enviroment.json file...')
+console.log('Reading enviroment-test.json file...')
 
 // If the environment file exists, read it.
 if (fs.existsSync(environmentFilePath)) {
@@ -46,8 +46,5 @@ testServer.addRouter(
 )
 testServer.addRouter(new MetisRouter('/api/v1/logins/', routerMap_logins))
 testServer.addRouter(new MetisRouter('/api/v1/tests/', routerMap_tests))
-
-// Start server.
-testServer.serve()
 
 export default { testServer }

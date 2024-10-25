@@ -2,16 +2,16 @@ import fs from 'fs'
 import TargetEnvironment, {
   TCommonTargetEnvJson,
   TTargetEnvOptions,
-} from 'metis/target-environments'
-import { TCommonTargetJson } from 'metis/target-environments/targets'
+} from 'metis/target-environments/index.ts'
+import { TCommonTargetJson } from 'metis/target-environments/targets.ts'
 import path from 'path'
-import { TServerMissionTypes } from '../missions'
-import ServerTarget from './targets'
+import { TServerMissionTypes } from '../missions/index.ts'
+import ServerTarget from './targets.ts'
 
 /**
  * A class for managing target environments on the server.
  */
-export default class ServerTargetEnvironment extends TargetEnvironment<TServerMissionTypes> {
+export default class ServerTargetEnvironment extends TargetEnvironment.default<TServerMissionTypes> {
   /**
    * @param data The data to use to create the ServerTargetEnvironment.
    * @param options The options for creating the ServerTargetEnvironment.
@@ -93,11 +93,11 @@ export default class ServerTargetEnvironment extends TargetEnvironment<TServerMi
    * @param targetJson The target JSON.
    * @returns An array of target environment JSON.
    */
-  public static scan(
+  public static async scan(
     directory: string,
     targetEnvironmentJson: TCommonTargetEnvJson[] = [],
     targetJson: TCommonTargetJson[] = [],
-  ): TCommonTargetEnvJson[] {
+  ): Promise<TCommonTargetEnvJson[]> {
     // The blacklisted files.
     let blackListedFiles: string[] = [
       path.join(directory, '.DS_Store'),
@@ -119,7 +119,7 @@ export default class ServerTargetEnvironment extends TargetEnvironment<TServerMi
       let directoryFiles: string[] = fs.readdirSync(directory)
 
       // Iterate over the files in the directory.
-      directoryFiles.forEach((file: string) => {
+      for (const file of directoryFiles) {
         // Check if previous file is a directory.
         let isDirectory: boolean = fs.lstatSync(directory).isDirectory()
         // If the previous file is a directory, then set the current directory
@@ -140,55 +140,57 @@ export default class ServerTargetEnvironment extends TargetEnvironment<TServerMi
         // If the file is a typescript file and it's an index file...
         if (isIndexFile && !isTargetFile) {
           // Grab the default export from the file.
-          let exportDefault: any = require(path.join(directory, file)).default
+          let fileImported: any = await import(path.join(directory, file))
+          let fileData: any = fileImported.default
 
           // If the default export has an ID, a name, a description,
           // and a version, then it is a target environment.
           if (
-            exportDefault &&
-            exportDefault._id &&
-            exportDefault.name &&
-            exportDefault.description &&
-            exportDefault.version
+            fileData &&
+            fileData._id &&
+            fileData.name &&
+            fileData.description &&
+            fileData.version
           ) {
             // Add the target environment JSON.
-            targetEnvironmentJson.push(exportDefault)
+            targetEnvironmentJson.push(fileData)
           }
         }
         // If the file is a typescript file and it's a target file...
         else if (isTargetFile && !isIndexFile) {
           // Grab the default export from the file.
-          let exportDefault: any = require(path.join(directory, file)).default
+          let fileImported: any = await import(path.join(directory, file))
+          let fileData: any = fileImported.default
 
           // If the default export has an ID, a target environment ID, a name,
           // a description, a script, and args, then it is a target.
           if (
-            exportDefault &&
-            exportDefault._id &&
-            exportDefault.targetEnvId &&
-            exportDefault.name &&
-            exportDefault.description &&
-            exportDefault.script &&
-            exportDefault.args
+            fileData &&
+            fileData._id &&
+            fileData.targetEnvId &&
+            fileData.name &&
+            fileData.description &&
+            fileData.script &&
+            fileData.args
           ) {
             // Add the target JSON.
-            targetJson.push(exportDefault)
+            targetJson.push(fileData)
           }
         }
         // Otherwise, the file is a directory.
         else {
           // If the file is a directory, recursively search for typescript files.
-          this.scan(
+          await this.scan(
             path.join(directory, file),
             targetEnvironmentJson,
             targetJson,
           )
         }
-      })
+      }
     }
 
     // Add the targets to the target environments.
-    targetJson.forEach((target: any) => {
+    for (let target of targetJson as any) {
       // Find the target environment that the target belongs to.
       let targetEnvironment: TCommonTargetEnvJson | undefined =
         targetEnvironmentJson.find(
@@ -210,7 +212,7 @@ export default class ServerTargetEnvironment extends TargetEnvironment<TServerMi
         // Add the target to the target environment.
         targetEnvironment.targets.push(target)
       }
-    })
+    }
 
     // Return the target environments.
     return targetEnvironmentJson

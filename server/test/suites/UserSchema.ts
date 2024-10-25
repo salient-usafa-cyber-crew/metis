@@ -1,14 +1,14 @@
 import { expect } from 'chai'
-import UserModel, { hashPassword } from '../../database/models/users'
-import { testLogger } from '../../logging'
-import ServerUser from '../../users'
-import { newCorrectUser } from '../data'
+import UserModel, { hashPassword } from '../../database/models/users.ts'
+import { testLogger } from '../../logging/index.ts'
+import ServerUser from '../../users/index.ts'
+import { newCorrectUser } from '../data.ts'
 
 /**
  * Tests the user schema validation functions that are used to validate data that is trying to be sent to
  * the database to be stored.
  */
-export default function UserSchema(): Mocha.Suite {
+export function UserSchema(): Mocha.Suite {
   return describe('User Schema Validation', function () {
     let hashedPassword: string = ''
 

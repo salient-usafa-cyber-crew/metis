@@ -1,33 +1,45 @@
-import { TClientEvents, TServerEvents, TServerMethod } from 'metis/connect/data'
-import { ServerEmittedError } from 'metis/connect/errors'
-import { TCommonMissionJson, TMissionJsonOptions } from 'metis/missions'
-import { TCommonOutputJson } from 'metis/missions/forces/output'
-import ServerMission, { TServerMissionTypes } from 'metis/server/missions'
-import ServerMissionAction from 'metis/server/missions/actions'
-import ServerMissionNode from 'metis/server/missions/nodes'
+import {
+  TClientEvents,
+  TServerEvents,
+  TServerMethod,
+} from 'metis/connect/data.ts'
+import { ServerEmittedError } from 'metis/connect/errors.ts'
+import { TCommonOutputJson } from 'metis/missions/forces/output.ts'
+import {
+  TCommonMissionJson,
+  TMissionJsonOptions,
+} from 'metis/missions/index.ts'
+import { MemberRole } from 'metis/server/global.ts'
+import ServerMissionAction from 'metis/server/missions/actions/index.ts'
+import ServerMission, {
+  TServerMissionTypes,
+} from 'metis/server/missions/index.ts'
+import ServerMissionNode from 'metis/server/missions/nodes/index.ts'
 import Session, {
   TSessionBasicJson,
   TSessionConfig,
   TSessionJson,
-} from 'metis/sessions'
-import { TSessionMemberJson } from 'metis/sessions/members'
-import MemberRole, { TMemberRoleId } from 'metis/sessions/members/roles'
-import { SingleTypeObject } from 'metis/toolbox/objects'
-import { TCommonUser } from 'metis/users'
+} from 'metis/sessions/index.ts'
+import { TSessionMemberJson } from 'metis/sessions/members/index.ts'
+import { TMemberRoleId } from 'metis/sessions/members/roles.ts'
+import { SingleTypeObject } from 'metis/toolbox/objects.ts'
+import { TCommonUser } from 'metis/users/index.ts'
 import { v4 as generateHash } from 'uuid'
-import ClientConnection from '../connect/clients'
-import { plcApiLogger } from '../logging'
-import ServerActionExecution from '../missions/actions/executions'
-import ServerMissionForce from '../missions/forces'
-import ServerOutput, { TServerOutputOptions } from '../missions/forces/output'
-import EnvironmentContextProvider from '../target-environments/context-provider'
-import ServerUser from '../users'
-import ServerSessionMember from './members'
+import ClientConnection from '../connect/clients.ts'
+import { plcApiLogger } from '../logging/index.ts'
+import ServerActionExecution from '../missions/actions/executions.ts'
+import ServerMissionForce from '../missions/forces/index.ts'
+import ServerOutput, {
+  TServerOutputOptions,
+} from '../missions/forces/output.ts'
+import EnvironmentContextProvider from '../target-environments/context-provider.ts'
+import ServerUser from '../users/index.ts'
+import ServerSessionMember from './members.ts'
 
 /**
  * Server instance for sessions. Handles server-side logic for a session with participating clients. Communicates with clients to conduct the session.
  */
-export default class SessionServer extends Session<TServerMissionTypes> {
+export default class SessionServer extends Session.default<TServerMissionTypes> {
   // Overridden.
   public get state() {
     return this._state

@@ -1,4 +1,4 @@
-import { AnyObject } from 'metis/toolbox/objects'
+import { AnyObject } from 'metis/toolbox/objects.ts'
 
 // todo: remove (v1 effects)
 export const effectData: AnyObject = {

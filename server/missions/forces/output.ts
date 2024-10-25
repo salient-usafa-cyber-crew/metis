@@ -1,16 +1,16 @@
 import Output, {
   TCommonOutputJson,
   TOutputOptions,
-} from 'metis/missions/forces/output'
-import ServerUser from 'metis/server/users'
-import ServerMissionForce from '.'
-import { TServerMissionTypes } from '..'
-import ServerActionExecution from '../actions/executions'
+} from 'metis/missions/forces/output.ts'
+import ServerUser from 'metis/server/users/index.ts'
+import ServerActionExecution from '../actions/executions.ts'
+import { TServerMissionTypes } from '../index.ts'
+import ServerMissionForce from './index.ts'
 
 /**
  * An output that's displayed in a force's output panel on the server.
  */
-export default class ServerOutput extends Output<TServerMissionTypes> {
+export default class ServerOutput extends Output.default<TServerMissionTypes> {
   /**
    * The ID of the user who triggered the output.
    */

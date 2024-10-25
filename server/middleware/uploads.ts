@@ -1,4 +1,4 @@
-import multer from 'multer'
+import multer from 'multer/index.ts'
 
 const uploads = multer({ dest: 'temp/missions/imports/' })
 

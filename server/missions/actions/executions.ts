@@ -1,15 +1,15 @@
 import TActionExecution, {
   TActionExecutionJson,
-} from 'metis/missions/actions/executions'
-import ServerMissionAction from '.'
-import { TServerMissionTypes } from '..'
-import ServerMissionNode from '../nodes'
+} from 'metis/missions/actions/executions.ts'
+import { TServerMissionTypes } from '../index.ts'
+import ServerMissionNode from '../nodes/index.ts'
+import ServerMissionAction from './index.ts'
 
 /**
  * The execution of an action on the server.
  */
 export default class ServerActionExecution
-  implements TActionExecution<TServerMissionTypes>
+  implements TActionExecution.default<TServerMissionTypes>
 {
   // Implemented
   public readonly action: ServerMissionAction

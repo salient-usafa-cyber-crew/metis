@@ -1,11 +1,11 @@
 import { expect } from 'chai'
-import { testLogger } from '../../logging'
-import { agent } from '../index.test'
+import { testLogger } from '../../logging/index.ts'
+import { agent } from '../index.ts'
 
 /**
  * Tests for the middleware function used to validate the data sent in the request params of the API routes.
  */
-export default function RequestParams(): Mocha.Suite {
+export function RequestParams(): Mocha.Suite {
   return describe('Request Params Validation', function () {
     let string: string = 'string'
     let number: number = 3.5

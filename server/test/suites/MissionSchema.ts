@@ -1,13 +1,13 @@
 import { expect } from 'chai'
-import MissionModel from '../../database/models/missions'
-import { testLogger } from '../../logging'
-import { testMission } from '../data'
+import MissionModel from '../../database/models/missions.ts'
+import { testLogger } from '../../logging/index.ts'
+import { testMission } from '../data.ts'
 
 /**
  * Tests the mission schema validation functions that are used to validate data that
  * is trying to be sent to the database.
  */
-export default function MissionSchema(): Mocha.Suite {
+export function MissionSchema(): Mocha.Suite {
   return describe('Mission Schema Validation', function () {
     // A mission's ID that will be used throughout this test suite.
     let missionId: string = ''
@@ -34,8 +34,8 @@ export default function MissionSchema(): Mocha.Suite {
         // be the same as the test mission's seed property
         expect(savedMission.seed).to.equal(testMission.seed)
         // The retrieved mission should have the same
-        // nodeStructure as the test mission
-        expect(savedMission.nodeStructure).to.deep.equal(testMission.structure)
+        // structure as the test mission
+        expect(savedMission.structure).to.deep.equal(testMission.structure)
         // The retrieved mission should have the same
         // forces as the test mission
         expect(savedMission.forces).to.deep.equal(testMission.forces)
@@ -66,10 +66,8 @@ export default function MissionSchema(): Mocha.Suite {
         // be the same as the test mission's seed property
         expect(retrievedMission.seed).to.equal(testMission.seed)
         // The retrieved mission should have the same
-        // nodeStructure as the test mission
-        expect(retrievedMission.nodeStructure).to.deep.equal(
-          testMission.structure,
-        )
+        // structure as the test mission
+        expect(retrievedMission.structure).to.deep.equal(testMission.structure)
         // The retrieved mission should have the same
         // forces as the test mission
         expect(retrievedMission.forces).to.deep.equal(testMission.forces)

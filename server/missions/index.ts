@@ -1,33 +1,35 @@
+import { TCommonMissionForceJson } from 'metis/missions/forces/index.ts'
 import Mission, {
   TCommonMissionJson,
   TCommonMissionTypes,
   TMissionOptions,
-} from 'metis/missions'
-import { TCommonMissionForceJson } from 'metis/missions/forces'
+} from 'metis/missions/index.ts'
 import {
   TCommonMissionPrototypeJson,
   TMissionPrototypeOptions,
-} from 'metis/missions/nodes/prototypes'
+} from 'metis/missions/nodes/prototypes.ts'
 import seedrandom, { PRNG } from 'seedrandom'
-import SessionServer from '../sessions'
-import ServerSessionMember from '../sessions/members'
-import ServerTargetEnvironment from '../target-environments'
-import { TTargetEnvContextMission } from '../target-environments/context-provider'
-import ServerTarget from '../target-environments/targets'
-import ServerUser from '../users'
-import ServerMissionAction from './actions'
-import ServerActionExecution from './actions/executions'
-import { ServerRealizedOutcome } from './actions/outcomes'
-import ServerEffect from './effects'
-import ServerMissionForce, { TServerMissionForceOptions } from './forces'
-import ServerOutput from './forces/output'
-import ServerMissionNode from './nodes'
-import ServerMissionPrototype from './nodes/prototypes'
+import SessionServer from '../sessions/index.ts'
+import ServerSessionMember from '../sessions/members.ts'
+import { TTargetEnvContextMission } from '../target-environments/context-provider.ts'
+import ServerTargetEnvironment from '../target-environments/index.ts'
+import ServerTarget from '../target-environments/targets.ts'
+import ServerUser from '../users/index.ts'
+import ServerActionExecution from './actions/executions.ts'
+import ServerMissionAction from './actions/index.ts'
+import { ServerRealizedOutcome } from './actions/outcomes.ts'
+import ServerEffect from './effects/index.ts'
+import ServerMissionForce, {
+  TServerMissionForceOptions,
+} from './forces/index.ts'
+import ServerOutput from './forces/output.ts'
+import ServerMissionNode from './nodes/index.ts'
+import ServerMissionPrototype from './nodes/prototypes.ts'
 
 /**
  * Class for managing missions on the server.
  */
-export default class ServerMission extends Mission<TServerMissionTypes> {
+export default class ServerMission extends Mission.default<TServerMissionTypes> {
   /**
    * The RNG used to generate random numbers for the mission.
    */

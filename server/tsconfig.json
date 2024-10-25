@@ -1,11 +1,21 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"],
       "metis/server": ["index.ts"],
-      "metis/server/*": ["*"],
+      "metis/server/*": [
+        "*",
+        "../shared/*",
+        "../../shared/*",
+        "../../../shared/*"
+      ],
       "metis/*": ["../shared/*"]
     }
   }

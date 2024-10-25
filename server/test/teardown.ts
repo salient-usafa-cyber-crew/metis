@@ -1,12 +1,12 @@
 import { expect } from 'chai'
-import MissionModel from '../database/models/missions'
-import UserModel from '../database/models/users'
-import { testLogger } from '../logging/index'
+import MissionModel from '../database/models/missions.ts'
+import UserModel from '../database/models/users.ts'
+import { testLogger } from '../logging/index.ts'
 
 /**
  * Deletes all the data that was created from the tests.
  */
-export default function Teardown(): void {
+export function Teardown(): void {
   return after(async function () {
     try {
       // Deletes all missions in the test database

@@ -1,13 +1,13 @@
 import fs from 'fs'
-import MetisServer, { IMetisServerOptions } from 'metis/server'
-import routerMap_files from 'metis/server/api/v1/files'
-import routerMap_info from 'metis/server/api/v1/info'
-import routerMap_logins from 'metis/server/api/v1/logins'
-import routerMap_missions from 'metis/server/api/v1/missions'
-import routerMap_sessions from 'metis/server/api/v1/sessions'
-import routerMap_targetEnvironments from 'metis/server/api/v1/target-environments'
-import routerMap_users from 'metis/server/api/v1/users'
-import MetisRouter from 'metis/server/http/router'
+import routerMap_files from 'metis/server/api/v1/files.ts'
+import routerMap_info from 'metis/server/api/v1/info.ts'
+import routerMap_logins from 'metis/server/api/v1/logins.ts'
+import routerMap_missions from 'metis/server/api/v1/missions.ts'
+import routerMap_sessions from 'metis/server/api/v1/sessions.ts'
+import routerMap_targetEnvironments from 'metis/server/api/v1/target-environments.ts'
+import routerMap_users from 'metis/server/api/v1/users.ts'
+import MetisRouter from 'metis/server/http/router.ts'
+import MetisServer, { IMetisServerOptions } from 'metis/server/index.ts'
 
 let { ENVIRONMENT_FILE_PATH: environmentFilePath } = MetisServer
 let serverOptions: IMetisServerOptions = {}

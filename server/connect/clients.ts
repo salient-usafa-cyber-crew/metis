@@ -6,12 +6,12 @@ import {
   TResponseEvent,
   TServerEvents,
   TServerMethod,
-} from 'metis/connect/data'
-import { ServerEmittedError } from 'metis/connect/errors'
-import ServerLogin from 'metis/server/logins'
+} from 'metis/connect/data.ts'
+import { ServerEmittedError } from 'metis/connect/errors.ts'
+import ServerLogin from 'metis/server/logins/index.ts'
 import { Socket } from 'socket.io'
-import SessionServer from '../sessions'
-import ServerUser from '../users'
+import SessionServer from '../sessions/index.ts'
+import ServerUser from '../users/index.ts'
 
 /* -- classes -- */
 

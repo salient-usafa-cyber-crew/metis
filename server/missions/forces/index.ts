@@ -2,14 +2,17 @@ import {
   MissionForce,
   TMissionForceJson,
   TMissionForceOptions,
-} from 'metis/missions/forces'
-import { TCommonOutputJson } from 'metis/missions/forces/output'
-import { TMissionNodeJson, TMissionNodeOptions } from 'metis/missions/nodes'
-import { TTargetEnvContextForce } from 'metis/server/target-environments/context-provider'
-import ServerUser from 'metis/server/users'
-import ServerMission, { TServerMissionTypes } from '..'
-import ServerMissionNode from '../nodes'
-import ServerOutput from './output'
+} from 'metis/missions/forces/index.ts'
+import { TCommonOutputJson } from 'metis/missions/forces/output.ts'
+import {
+  TMissionNodeJson,
+  TMissionNodeOptions,
+} from 'metis/missions/nodes/index.ts'
+import { TTargetEnvContextForce } from 'metis/server/target-environments/context-provider.ts'
+import ServerUser from 'metis/server/users/index.ts'
+import ServerMission, { TServerMissionTypes } from '../index.ts'
+import ServerMissionNode from '../nodes/index.ts'
+import ServerOutput from './output.ts'
 
 /**
  * Class for managing mission prototypes on the client.
