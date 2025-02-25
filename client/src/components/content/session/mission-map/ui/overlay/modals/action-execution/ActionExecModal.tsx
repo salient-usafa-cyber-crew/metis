@@ -217,6 +217,7 @@ export default function ActionExecModal({
    */
   const execute = () => {
     if (ready) {
+      console.log(cheats)
       session.executeAction(selectedAction!._id, {
         // This will be ignored if the member
         // does not have authorization to use cheats.
@@ -240,6 +241,7 @@ export default function ActionExecModal({
           key={action._id}
           session={session}
           action={action}
+          session={session}
           select={() => {
             selectAction(action)
             setDropDownExpanded(false)
