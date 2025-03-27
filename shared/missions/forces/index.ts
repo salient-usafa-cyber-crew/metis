@@ -84,19 +84,19 @@ export abstract class MissionForce<
       cursorStructure: AnyObject = {},
     ): AnyObject => {
       if (cursor.revealed) {
+        let { structureKey } = cursor.prototype
+        cursorStructure[structureKey] = {}
         for (let child of cursor.children) {
-          if (child.hasChildren) {
-            cursorStructure[child.prototype.structureKey] = algorithm(child)
-          } else {
-            cursorStructure[child.prototype.structureKey] = {}
-          }
+          algorithm(child, cursorStructure[structureKey])
         }
       }
+
       return cursorStructure
     }
 
     // Return the result of the operation.
-    return algorithm()
+    let structure = algorithm()
+    return structure[this.root.prototype.structureKey]
   }
 
   /**
