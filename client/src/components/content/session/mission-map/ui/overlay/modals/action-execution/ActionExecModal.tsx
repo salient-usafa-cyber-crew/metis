@@ -241,7 +241,6 @@ export default function ActionExecModal({
           key={action._id}
           session={session}
           action={action}
-          session={session}
           select={() => {
             selectAction(action)
             setDropDownExpanded(false)
